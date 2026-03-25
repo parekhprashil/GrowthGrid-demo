@@ -1,0 +1,632 @@
+<!doctype html>
+
+<html class="dark" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>GrowthGrid | Testimonials</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-tertiary": "#722070",
+              "on-primary-fixed-variant": "#002a62",
+              primary: "#85adff",
+              "on-secondary-fixed-variant": "#7511c3",
+              "on-surface": "#e5e7f6",
+              "tertiary-fixed": "#fe9cf4",
+              "on-tertiary-container": "#661466",
+              tertiary: "#ffb4f4",
+              "primary-fixed-dim": "#5391ff",
+              "tertiary-container": "#fe9cf4",
+              "secondary-fixed": "#e5c6ff",
+              "secondary-fixed-dim": "#dbb4ff",
+              "on-background": "#e5e7f6",
+              "error-dim": "#d7383b",
+              surface: "#0a0e18",
+              "surface-dim": "#0a0e18",
+              "primary-dim": "#699cff",
+              "secondary-dim": "#9c48ea",
+              "surface-bright": "#262c3c",
+              "surface-container-high": "#1a1f2d",
+              "on-error-container": "#ffa8a3",
+              "on-surface-variant": "#a7aab9",
+              "tertiary-dim": "#ef8fe5",
+              "surface-container-low": "#0f131e",
+              "on-error": "#490006",
+              outline: "#727582",
+              "primary-container": "#6e9fff",
+              background: "#0a0e18",
+              "outline-variant": "#444854",
+              "on-secondary-fixed": "#4f0089",
+              "secondary-container": "#6f00be",
+              "on-primary": "#002c66",
+              "on-tertiary-fixed": "#480049",
+              "on-tertiary-fixed-variant": "#711f6f",
+              "on-primary-container": "#002150",
+              "inverse-on-surface": "#515561",
+              "inverse-surface": "#faf8ff",
+              "tertiary-fixed-dim": "#ef8fe5",
+              "surface-container-lowest": "#000000",
+              "primary-fixed": "#6e9fff",
+              "on-primary-fixed": "#000000",
+              "on-secondary-container": "#e9cdff",
+              secondary: "#c180ff",
+              "inverse-primary": "#005bc4",
+              "error-container": "#9f0519",
+              "on-secondary": "#33005b",
+              "surface-tint": "#85adff",
+              "surface-container-highest": "#202534",
+              error: "#ff716c",
+              "surface-variant": "#202534",
+              "surface-container": "#151926",
+            },
+            fontFamily: {
+              headline: ["Manrope"],
+              body: ["Inter"],
+              label: ["Inter"],
+            },
+            borderRadius: {
+              DEFAULT: "0.25rem",
+              lg: "0.5rem",
+              xl: "0.75rem",
+              full: "9999px",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      .material-symbols-outlined {
+        font-variation-settings:
+          "FILL" 0,
+          "wght" 400,
+          "GRAD" 0,
+          "opsz" 24;
+      }
+      .glass-card {
+        background: rgba(21, 25, 38, 0.7);
+        backdrop-filter: blur(20px);
+      }
+      .text-wall {
+        letter-spacing: -0.02em;
+      }
+      .kinetic-gradient {
+        background: linear-gradient(135deg, #85adff 0%, #6e9fff 100%);
+      }
+    </style>
+  </head>
+  <body
+    class="bg-surface text-on-surface font-body selection:bg-primary selection:text-on-primary"
+  >
+    <!-- TopNavBar -->
+    <nav
+      class="fixed top-0 w-full z-50 bg-surface/80 dark:bg-[#0a0e18]/80 backdrop-blur-xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] dark:shadow-none"
+    >
+      <div
+        class="flex justify-between items-center max-w-7xl mx-auto px-6 h-20"
+      >
+        <span
+          class="text-2xl font-black tracking-tighter text-slate-900 dark:text-white"
+          >GrowthGrid</span
+        >
+        <div class="hidden md:flex items-center gap-8">
+          <a
+            class="text-slate-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-[#85adff] transition-colors font-['Manrope'] font-medium tracking-tight text-sm"
+            href="index.html"
+            >Home</a
+          >
+          <a
+            class="text-slate-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-[#85adff] transition-colors font-['Manrope'] font-medium tracking-tight text-sm"
+            href="about.html"
+            >About</a
+          >
+          <a
+            class="text-slate-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-[#85adff] transition-colors font-['Manrope'] font-medium tracking-tight text-sm"
+            href="services.html"
+            >Services</a
+          >
+          <a
+            class="text-slate-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-[#85adff] transition-colors font-['Manrope'] font-medium tracking-tight text-sm"
+            href="portfolio.html"
+            >Portfolio</a
+          >
+          <a
+            class="text-slate-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-[#85adff] transition-colors font-['Manrope'] font-medium tracking-tight text-sm"
+            href="process.html"
+            >Process</a
+          >
+          <a
+            class="text-blue-600 dark:text-[#85adff] font-bold border-b-2 border-blue-600 dark:border-[#85adff] pb-1 font-['Manrope'] tracking-tight text-sm"
+            href="testimonials.html"
+            >Testimonials</a
+          >
+        </div>
+        <div class="flex items-center gap-2 md:gap-4">
+          <button
+            id="mobile-menu-btn"
+            class="md:hidden p-2 text-slate-600 dark:text-slate-400 hover:opacity-80 transition-all duration-300"
+          >
+            <span id="menu-icon" class="material-symbols-outlined">menu</span>
+            <span id="close-icon" class="material-symbols-outlined hidden">close</span>
+          </button>
+          <button
+            class="p-2 text-on-surface-variant hover:opacity-80 transition-all duration-300 ease-in-out scale-95 active:scale-90"
+          >
+            <span class="material-symbols-outlined" data-icon="dark_mode"
+              >dark_mode</span
+            >
+          </button>
+          <button
+            class="kinetic-gradient text-on-primary px-6 py-2 rounded-full font-headline font-bold text-sm hover:opacity-90 transition-all duration-300"
+          >
+            Contact
+          </button>
+        </div>
+      </div>
+      <!-- Mobile Menu -->
+      <div
+        id="mobile-menu"
+        class="hidden md:hidden absolute top-full left-0 right-0 bg-surface/95 dark:bg-[#0a0e18]/95 backdrop-blur-xl border-b border-outline-variant/20 shadow-lg"
+      >
+        <div class="max-w-7xl mx-auto px-6 py-4 space-y-2">
+          <a
+            class="block px-4 py-3 text-slate-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-[#85adff] hover:bg-on-surface/5 rounded-lg transition-colors"
+            href="index.html"
+            >Home</a
+          >
+          <a
+            class="block px-4 py-3 text-slate-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-[#85adff] hover:bg-on-surface/5 rounded-lg transition-colors"
+            href="about.html"
+            >About</a
+          >
+          <a
+            class="block px-4 py-3 text-slate-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-[#85adff] hover:bg-on-surface/5 rounded-lg transition-colors"
+            href="services.html"
+            >Services</a
+          >
+          <a
+            class="block px-4 py-3 text-slate-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-[#85adff] hover:bg-on-surface/5 rounded-lg transition-colors"
+            href="portfolio.html"
+            >Portfolio</a
+          >
+          <a
+            class="block px-4 py-3 text-slate-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-[#85adff] hover:bg-on-surface/5 rounded-lg transition-colors"
+            href="process.html"
+            >Process</a
+          >
+          <a
+            class="block px-4 py-3 text-blue-600 dark:text-[#85adff] font-bold rounded-lg hover:bg-on-surface/5 transition-colors"
+            href="testimonials.html"
+            >Testimonials</a
+          >
+        </div>
+      </div>
+    </nav>
+    <main class="pt-32 pb-24 overflow-hidden">
+      <!-- Hero Section: Intentional Asymmetry -->
+      <section class="max-w-7xl mx-auto px-6 mb-32">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-end">
+          <div class="lg:col-span-8">
+            <span
+              class="text-primary font-headline font-bold tracking-widest uppercase text-xs mb-4 block"
+              >Proven Performance</span
+            >
+            <h1
+              class="text-6xl md:text-8xl font-headline font-black text-wall text-white leading-none mb-8"
+            >
+              The Architect's <br /><span class="text-primary-container"
+                >Evidence.</span
+              >
+            </h1>
+          </div>
+          <div class="lg:col-span-4 pb-4">
+            <p
+              class="text-on-surface-variant text-lg leading-relaxed border-l-2 border-primary-container/30 pl-6"
+            >
+              We don't just design interfaces; we engineer growth. Discover how
+              our digital strategies have transformed visionaries into market
+              leaders.
+            </p>
+          </div>
+        </div>
+      </section>
+      <!-- Success Metrics: Tonal Layering -->
+      <section class="mb-32">
+        <div class="bg-surface-container-low py-24">
+          <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+              <div class="group">
+                <h3
+                  class="text-5xl font-headline font-extrabold text-white mb-2"
+                >
+                  +140%
+                </h3>
+                <div
+                  class="h-1 w-12 bg-primary mb-4 transition-all duration-300 group-hover:w-full"
+                ></div>
+                <p
+                  class="text-sm font-label uppercase tracking-widest text-on-surface-variant"
+                >
+                  Conversion Velocity
+                </p>
+                <p class="mt-4 text-on-surface/70 text-sm">
+                  Optimized checkout flows for global e-commerce retail giants.
+                </p>
+              </div>
+              <div class="group">
+                <h3
+                  class="text-5xl font-headline font-extrabold text-white mb-2"
+                >
+                  2.4M
+                </h3>
+                <div
+                  class="h-1 w-12 bg-secondary mb-4 transition-all duration-300 group-hover:w-full"
+                ></div>
+                <p
+                  class="text-sm font-label uppercase tracking-widest text-on-surface-variant"
+                >
+                  Active User Reach
+                </p>
+                <p class="mt-4 text-on-surface/70 text-sm">
+                  Scaling architectures to support massive concurrent global
+                  traffic.
+                </p>
+              </div>
+              <div class="group">
+                <h3
+                  class="text-5xl font-headline font-extrabold text-white mb-2"
+                >
+                  -$12M
+                </h3>
+                <div
+                  class="h-1 w-12 bg-tertiary mb-4 transition-all duration-300 group-hover:w-full"
+                ></div>
+                <p
+                  class="text-sm font-label uppercase tracking-widest text-on-surface-variant"
+                >
+                  Operational Efficiency
+                </p>
+                <p class="mt-4 text-on-surface/70 text-sm">
+                  Reduced overhead through intelligent automation and AI
+                  integration.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Client Feedback Grid: Bento Grid with Glassmorphism -->
+      <section class="max-w-7xl mx-auto px-6 mb-32">
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+          <!-- Large Featured Testimonial -->
+          <div
+            class="md:col-span-8 glass-card rounded-xl p-10 flex flex-col justify-between min-h-[400px]"
+          >
+            <div>
+              <span
+                class="material-symbols-outlined text-primary text-5xl mb-8"
+                data-icon="format_quote"
+                >format_quote</span
+              >
+              <p
+                class="text-2xl md:text-3xl font-headline font-medium text-white leading-tight italic"
+              >
+                "GrowthGrid didn't just rebuild our platform; they redefined our
+                entire digital presence. The architectural precision they
+                brought to our UX resulted in an immediate 40% jump in
+                conversions."
+              </p>
+            </div>
+            <div class="mt-12 flex items-center gap-4">
+              <img
+                class="w-16 h-16 rounded-full object-cover"
+                data-alt="Professional headshot of a corporate executive"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAwuo2aCWm2NagpR96rY38KqGJgcJuc9dxPQ6N6yBTTD4VJlevXYS7R7ojbr6jP65K3fde9oBQq60iznyRvVQl4IcYauDb_2gNeK7ROF5uPH24YZ-FzNRBjjiZaEeb207b7-Di3Spn_mN3Ob2t-EJ7FP8EvSEe2IxRraZ5-tOR5xZiWcXjpeY-PZL_A6JyHlLOyToujLscyBdV0BDve-3JcYU_CU_GaASWPSqiE1p1r-9_YUYCXy_GLOQ1G3ngPZoJq5UgjyAQ-dFk"
+              />
+              <div>
+                <h4 class="font-headline font-bold text-white">
+                  Marcus Sterling
+                </h4>
+                <p
+                  class="text-xs font-label text-on-surface-variant uppercase tracking-wider"
+                >
+                  CTO, NexaCorp Global
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- Secondary Testimonial -->
+          <div
+            class="md:col-span-4 bg-surface-container rounded-xl p-8 flex flex-col justify-between"
+          >
+            <div class="mb-6">
+              <div class="flex gap-1 mb-6">
+                <span
+                  class="material-symbols-outlined text-primary-fixed-dim text-sm"
+                  data-icon="star"
+                  data-weight="fill"
+                  style="font-variation-settings: &quot;FILL&quot; 1"
+                  >star</span
+                >
+                <span
+                  class="material-symbols-outlined text-primary-fixed-dim text-sm"
+                  data-icon="star"
+                  data-weight="fill"
+                  style="font-variation-settings: &quot;FILL&quot; 1"
+                  >star</span
+                >
+                <span
+                  class="material-symbols-outlined text-primary-fixed-dim text-sm"
+                  data-icon="star"
+                  data-weight="fill"
+                  style="font-variation-settings: &quot;FILL&quot; 1"
+                  >star</span
+                >
+                <span
+                  class="material-symbols-outlined text-primary-fixed-dim text-sm"
+                  data-icon="star"
+                  data-weight="fill"
+                  style="font-variation-settings: &quot;FILL&quot; 1"
+                  >star</span
+                >
+                <span
+                  class="material-symbols-outlined text-primary-fixed-dim text-sm"
+                  data-icon="star"
+                  data-weight="fill"
+                  style="font-variation-settings: &quot;FILL&quot; 1"
+                  >star</span
+                >
+              </div>
+              <p class="text-on-surface leading-relaxed italic">
+                "The most professional team I've worked with in a decade. Their
+                process is invisible yet incredibly effective."
+              </p>
+            </div>
+            <div class="flex items-center gap-3">
+              <div
+                class="w-10 h-10 rounded-full bg-surface-bright flex items-center justify-center font-bold text-primary"
+              >
+                SL
+              </div>
+              <div>
+                <h4 class="text-sm font-headline font-bold text-white">
+                  Sarah Lund
+                </h4>
+                <p
+                  class="text-[10px] font-label text-on-surface-variant uppercase tracking-widest"
+                >
+                  Founder, Lumina Creative
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- Small Grid Items -->
+          <div class="md:col-span-4 bg-surface-container-high rounded-xl p-8">
+            <p class="text-on-surface/80 text-sm leading-relaxed mb-6 italic">
+              "Their attention to detail is bordering on obsessive. Exactly what
+              we needed for our high-end fintech launch."
+            </p>
+            <div class="flex items-center gap-3">
+              <img
+                class="w-10 h-10 rounded-full object-cover"
+                data-alt="Portrait of a young male entrepreneur"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCQluko3hqglrmc5v_yrJrfbT0QGqF6s4y9lr2sqEv2_IYsDThSrCr3WuRIhhY3l7Mi1HsGpz1uNdCoNsznnlMJ5hDc3Yf7akmDJoE28Pfjyh_WUCky18ivqcX9SG0RQUS_3HJRX7xfplxHImFGtuiEzU8zmqDJr0ebvvCCYPBfxOA5y116QGmPZGsaOApfOtWQLaYZWHl3PT2ELmArqXtOf-uWbuKXz5fAI5hvfIZcdSIcFsOzmTsz5EcKaLCjj72vCGEeMqDA1-Y"
+              />
+              <div>
+                <h4 class="text-sm font-headline font-bold text-white">
+                  James Chen
+                </h4>
+                <p
+                  class="text-[10px] font-label text-on-surface-variant uppercase tracking-widest"
+                >
+                  Product Head, SecurePay
+                </p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="md:col-span-4 glass-card rounded-xl p-8 border-l-4 border-primary/20"
+          >
+            <p class="text-on-surface/80 text-sm leading-relaxed mb-6 italic">
+              "GrowthGrid delivered a design system that scaled effortlessly
+              across our 12 regional offices. A true partner."
+            </p>
+            <div class="flex items-center gap-3">
+              <img
+                class="w-10 h-10 rounded-full object-cover"
+                data-alt="Portrait of a professional female director"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBLBF4C0NujZfSwJ71D_vGJ2W55659QwMSgItuIWqOlsd25YUgCbxaa2QXKiErErH_7TwdWYoLw8HFaSXkm7QUFiBHOEgHp-PNSKt3pdaeJvsND3WYzx9LiKlABi8rQsaRVFt85QsxSBFC_PB_WI8yQjL46m4x-uIhkDOCbqP1QK1ujHU05ivqLVnHnaajHAgdyXkPOEYojqRM9i4mdhMbe9JVi7MuZv_liXrD98IZCBdbjAh79BI7PpJKFSlvWHvZQdCckrUV7PZw"
+              />
+              <div>
+                <h4 class="text-sm font-headline font-bold text-white">
+                  Elena Rodriguez
+                </h4>
+                <p
+                  class="text-[10px] font-label text-on-surface-variant uppercase tracking-widest"
+                >
+                  Director, VertiFlow
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="md:col-span-4 bg-surface-container rounded-xl p-8">
+            <p class="text-on-surface/80 text-sm leading-relaxed mb-6 italic">
+              "The kinetic design approach they used for our dashboard made
+              complex data feel intuitive. Highly recommended."
+            </p>
+            <div class="flex items-center gap-3">
+              <div
+                class="w-10 h-10 rounded-full bg-secondary-container/20 flex items-center justify-center font-bold text-secondary"
+              >
+                RK
+              </div>
+              <div>
+                <h4 class="text-sm font-headline font-bold text-white">
+                  Robert Kimm
+                </h4>
+                <p
+                  class="text-[10px] font-label text-on-surface-variant uppercase tracking-widest"
+                >
+                  CEO, DataPulse
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- CTA Section: High Contrast Floating Surface -->
+      <section class="max-w-7xl mx-auto px-6">
+        <div
+          class="relative rounded-3xl overflow-hidden kinetic-gradient p-12 md:p-24 text-center"
+        >
+          <div
+            class="absolute inset-0 opacity-10 pointer-events-none overflow-hidden"
+          >
+            <div
+              class="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_-20%,#ffffff_0%,transparent_70%)]"
+            ></div>
+          </div>
+          <div class="relative z-10 max-w-2xl mx-auto">
+            <h2
+              class="text-4xl md:text-6xl font-headline font-black text-on-primary-container leading-none mb-6"
+            >
+              Ready to be our next
+              <span
+                class="underline decoration-on-primary-fixed/30 underline-offset-8"
+                >success story</span
+              >?
+            </h2>
+            <p class="text-on-primary-container/80 text-lg mb-10">
+              Join an elite list of brands that have redefined their digital
+              trajectory through the GrowthGrid methodology.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+              <button
+                class="bg-surface text-white px-10 py-5 rounded-full font-headline font-extrabold hover:scale-105 transition-all duration-300 shadow-xl"
+              >
+                Join our list of successful clients
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- Footer -->
+    <footer class="bg-slate-50 dark:bg-[#0f131e] w-full py-16 px-6">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-12 max-w-7xl mx-auto">
+        <div class="md:col-span-1">
+          <span
+            class="text-xl font-bold tracking-tighter text-slate-900 dark:text-white mb-4 block"
+            >GrowthGrid</span
+          >
+          <p
+            class="text-slate-500 dark:text-slate-400 font-['Inter'] text-sm leading-relaxed"
+          >
+            Architecting digital dominance through editorial design and kinetic
+            engineering.
+          </p>
+        </div>
+        <div>
+          <h5
+            class="text-white font-headline font-bold mb-6 text-sm uppercase tracking-widest"
+          >
+            Network
+          </h5>
+          <ul class="space-y-4">
+            <li>
+              <a
+                class="text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-all duration-200 font-['Inter'] text-sm leading-relaxed"
+                href="#"
+                >Email Us</a
+              >
+            </li>
+            <li>
+              <a
+                class="text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-all duration-200 font-['Inter'] text-sm leading-relaxed"
+                href="#"
+                >LinkedIn</a
+              >
+            </li>
+            <li>
+              <a
+                class="text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-all duration-200 font-['Inter'] text-sm leading-relaxed"
+                href="#"
+                >Instagram</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h5
+            class="text-white font-headline font-bold mb-6 text-sm uppercase tracking-widest"
+          >
+            Connect
+          </h5>
+          <ul class="space-y-4">
+            <li>
+              <a
+                class="text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-all duration-200 font-['Inter'] text-sm leading-relaxed"
+                href="#"
+                >Twitter</a
+              >
+            </li>
+            <li>
+              <a
+                class="text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-all duration-200 font-['Inter'] text-sm leading-relaxed"
+                href="#"
+                >Privacy Policy</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="flex flex-col justify-end items-start md:items-end">
+          <p
+            class="text-slate-500 dark:text-slate-400 font-['Inter'] text-sm leading-relaxed"
+          >
+            © 2024 GrowthGrid Digital. All rights reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+    <script>
+      const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+      const mobileMenu = document.getElementById('mobile-menu');
+      const menuIcon = document.getElementById('menu-icon');
+      const closeIcon = document.getElementById('close-icon');
+      
+      if (mobileMenuBtn) {
+        mobileMenuBtn.addEventListener('click', () => {
+          mobileMenu.classList.toggle('hidden');
+          menuIcon.classList.toggle('hidden');
+          closeIcon.classList.toggle('hidden');
+        });
+        
+        // Close menu when a link is clicked
+        const menuLinks = mobileMenu.querySelectorAll('a');
+        menuLinks.forEach(link => {
+          link.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+            menuIcon.classList.remove('hidden');
+            closeIcon.classList.add('hidden');
+          });
+        });
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,638 @@
+<!doctype html>
+
+<html class="dark" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;400;500;700;800&amp;family=Inter:wght@300;400;500;600&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-tertiary": "#722070",
+              "on-primary-fixed-variant": "#002a62",
+              primary: "#85adff",
+              "on-secondary-fixed-variant": "#7511c3",
+              "on-surface": "#e5e7f6",
+              "tertiary-fixed": "#fe9cf4",
+              "on-tertiary-container": "#661466",
+              tertiary: "#ffb4f4",
+              "primary-fixed-dim": "#5391ff",
+              "tertiary-container": "#fe9cf4",
+              "secondary-fixed": "#e5c6ff",
+              "secondary-fixed-dim": "#dbb4ff",
+              "on-background": "#e5e7f6",
+              "error-dim": "#d7383b",
+              surface: "#0a0e18",
+              "surface-dim": "#0a0e18",
+              "primary-dim": "#699cff",
+              "secondary-dim": "#9c48ea",
+              "surface-bright": "#262c3c",
+              "surface-container-high": "#1a1f2d",
+              "on-error-container": "#ffa8a3",
+              "on-surface-variant": "#a7aab9",
+              "tertiary-dim": "#ef8fe5",
+              "surface-container-low": "#0f131e",
+              "on-error": "#490006",
+              outline: "#727582",
+              "primary-container": "#6e9fff",
+              background: "#0a0e18",
+              "outline-variant": "#444854",
+              "on-secondary-fixed": "#4f0089",
+              "secondary-container": "#6f00be",
+              "on-primary": "#002c66",
+              "on-tertiary-fixed": "#480049",
+              "on-tertiary-fixed-variant": "#711f6f",
+              "on-primary-container": "#002150",
+              "inverse-on-surface": "#515561",
+              "inverse-surface": "#faf8ff",
+              "tertiary-fixed-dim": "#ef8fe5",
+              "surface-container-lowest": "#000000",
+              "primary-fixed": "#6e9fff",
+              "on-primary-fixed": "#000000",
+              "on-secondary-container": "#e9cdff",
+              secondary: "#c180ff",
+              "inverse-primary": "#005bc4",
+              "error-container": "#9f0519",
+              "on-secondary": "#33005b",
+              "surface-tint": "#85adff",
+              "surface-container-highest": "#202534",
+              error: "#ff716c",
+              "surface-variant": "#202534",
+              "surface-container": "#151926",
+            },
+            fontFamily: {
+              headline: ["Manrope"],
+              body: ["Inter"],
+              label: ["Inter"],
+            },
+            borderRadius: {
+              DEFAULT: "0.25rem",
+              lg: "0.5rem",
+              xl: "0.75rem",
+              full: "9999px",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      .material-symbols-outlined {
+        font-variation-settings:
+          "FILL" 0,
+          "wght" 400,
+          "GRAD" 0,
+          "opsz" 24;
+      }
+      .glass-effect {
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+      }
+      .text-wall {
+        letter-spacing: -0.02em;
+      }
+    </style>
+  </head>
+  <body class="bg-surface text-on-surface font-body selection:bg-primary/30">
+    <!-- TopNavBar -->
+    <nav
+      class="fixed top-0 w-full z-50 bg-surface/80 dark:bg-[#0a0e18]/80 backdrop-blur-xl no-border shadow-[0_8px_30px_rgb(0,0,0,0.04)] dark:shadow-none h-20 flex items-center"
+    >
+      <div
+        class="flex justify-between items-center max-w-7xl mx-auto px-6 w-full"
+      >
+        <div
+          class="text-2xl font-black tracking-tighter text-slate-900 dark:text-white"
+        >
+          GrowthGrid
+        </div>
+        <div class="hidden md:flex items-center space-x-8">
+          <a
+            class="font-['Manrope'] font-medium tracking-tight text-sm text-slate-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-[#85adff] transition-colors"
+            href="index.html"
+            >Home</a
+          >
+          <a
+            class="font-['Manrope'] font-medium tracking-tight text-sm text-slate-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-[#85adff] transition-colors"
+            href="about.html"
+            >About</a
+          >
+          <a
+            class="font-['Manrope'] font-medium tracking-tight text-sm text-slate-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-[#85adff] transition-colors"
+            href="services.html"
+            >Services</a
+          >
+          <a
+            class="font-['Manrope'] font-medium tracking-tight text-sm text-blue-600 dark:text-[#85adff] font-bold border-b-2 border-blue-600 dark:border-[#85adff] pb-1"
+            href="portfolio.html"
+            >Portfolio</a
+          >
+          <a
+            class="font-['Manrope'] font-medium tracking-tight text-sm text-slate-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-[#85adff] transition-colors"
+            href="process.html"
+            >Process</a
+          >
+          <a
+            class="font-['Manrope'] font-medium tracking-tight text-sm text-slate-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-[#85adff] transition-colors"
+            href="testimonials.html"
+            >Testimonials</a
+          >
+        </div>
+        <div class="flex items-center space-x-2 md:space-x-4">
+          <button
+            id="mobile-menu-btn"
+            class="md:hidden p-2 text-slate-600 dark:text-slate-400 hover:opacity-80 transition-all duration-300"
+          >
+            <span id="menu-icon" class="material-symbols-outlined">menu</span>
+            <span id="close-icon" class="material-symbols-outlined hidden">close</span>
+          </button>
+          <button
+            class="text-on-surface hover:opacity-80 transition-all duration-300 ease-in-out scale-95 active:scale-90"
+          >
+            <span class="material-symbols-outlined" data-icon="dark_mode"
+              >dark_mode</span
+            >
+          </button>
+          <button
+            class="bg-gradient-to-br from-primary to-primary-container text-on-primary px-6 py-2 rounded-full font-headline font-bold text-sm hover:opacity-90 transition-all shadow-[0_0_20px_rgba(133,173,255,0.3)]"
+          >
+            Contact
+          </button>
+        </div>
+      </div>
+      <!-- Mobile Menu -->
+      <div
+        id="mobile-menu"
+        class="hidden md:hidden absolute top-full left-0 right-0 bg-surface/95 dark:bg-[#0a0e18]/95 backdrop-blur-xl border-b border-outline-variant/20 shadow-lg"
+      >
+        <div class="max-w-7xl mx-auto px-6 py-4 space-y-2">
+          <a
+            class="block px-4 py-3 text-slate-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-[#85adff] hover:bg-on-surface/5 rounded-lg transition-colors"
+            href="index.html"
+            >Home</a
+          >
+          <a
+            class="block px-4 py-3 text-slate-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-[#85adff] hover:bg-on-surface/5 rounded-lg transition-colors"
+            href="about.html"
+            >About</a
+          >
+          <a
+            class="block px-4 py-3 text-slate-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-[#85adff] hover:bg-on-surface/5 rounded-lg transition-colors"
+            href="services.html"
+            >Services</a
+          >
+          <a
+            class="block px-4 py-3 text-blue-600 dark:text-[#85adff] font-bold rounded-lg hover:bg-on-surface/5 transition-colors"
+            href="portfolio.html"
+            >Portfolio</a
+          >
+          <a
+            class="block px-4 py-3 text-slate-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-[#85adff] hover:bg-on-surface/5 rounded-lg transition-colors"
+            href="process.html"
+            >Process</a
+          >
+          <a
+            class="block px-4 py-3 text-slate-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-[#85adff] hover:bg-on-surface/5 rounded-lg transition-colors"
+            href="testimonials.html"
+            >Testimonials</a
+          >
+        </div>
+      </div>
+    </nav>
+    <main class="pt-32 pb-24">
+      <!-- Hero Section -->
+      <section class="max-w-7xl mx-auto px-6 mb-20">
+        <h1
+          class="font-headline text-6xl md:text-8xl font-extrabold text-wall mb-6 leading-tight"
+        >
+          Curated <span class="text-primary">Impact.</span>
+        </h1>
+        <p
+          class="text-on-surface-variant max-w-2xl text-lg md:text-xl font-light leading-relaxed"
+        >
+          A showcase of digital architectural excellence. We don't just build
+          interfaces; we sculpt experiences that define market leaders.
+        </p>
+      </section>
+      <!-- Filter Bar -->
+      <section class="max-w-7xl mx-auto px-6 mb-12">
+        <div class="flex flex-wrap gap-4 items-center">
+          <span
+            class="text-on-surface-variant text-sm font-label uppercase tracking-widest mr-4"
+            >Filter by:</span
+          >
+          <button
+            class="px-6 py-2 rounded-full bg-primary text-on-primary font-bold text-sm transition-all"
+          >
+            All Works
+          </button>
+          <button
+            class="px-6 py-2 rounded-full bg-surface-container-high text-on-surface-variant hover:text-on-surface font-medium text-sm transition-all"
+          >
+            Web Apps
+          </button>
+          <button
+            class="px-6 py-2 rounded-full bg-surface-container-high text-on-surface-variant hover:text-on-surface font-medium text-sm transition-all"
+          >
+            Mobile
+          </button>
+          <button
+            class="px-6 py-2 rounded-full bg-surface-container-high text-on-surface-variant hover:text-on-surface font-medium text-sm transition-all"
+          >
+            UI/UX Design
+          </button>
+        </div>
+      </section>
+      <!-- Project Grid (Asymmetric) -->
+      <section class="max-w-7xl mx-auto px-6 mb-32">
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-8">
+          <!-- Project Card 1 (Large) -->
+          <div
+            class="md:col-span-8 group relative overflow-hidden rounded-xl bg-surface-container shadow-2xl transition-all duration-500 hover:-translate-y-2"
+          >
+            <div class="aspect-[16/9] w-full overflow-hidden">
+              <img
+                alt="Fintech Dashboard Design"
+                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0 opacity-80 group-hover:opacity-100"
+                data-alt="Modern high-tech fintech dashboard interface on a screen"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCUbuZdDiTGNdTDiJo1CibnF_Vh8YTaoNAyEb9aaBB9g5GMPQiRkav5jqNsMk2MouMFbWegFMTpwHqr4q-yApEYSXNw6lImLGRuLiHAlIHrW8Zoud4uiEjRs_l2VQd58KAKz4kqbMlHvijtF3_1mRpM8DUwRhsxpNHwF1q_Q9JGAhVt-NnbktwEjTfulzHf89uR0g1eW4JK8QjJiXwp7ehNwALvmv5_g-Y9noZc0AKINLUyQ-vLjGkTVBO3MAu98ZZx4pvekDfXXQw"
+              />
+            </div>
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-transparent to-transparent opacity-60"
+            ></div>
+            <div
+              class="absolute bottom-0 left-0 p-8 w-full translate-y-4 group-hover:translate-y-0 transition-transform duration-500"
+            >
+              <p
+                class="text-primary font-label text-xs uppercase tracking-[0.3em] mb-2"
+              >
+                Web Application
+              </p>
+              <h3 class="font-headline text-3xl font-bold text-white mb-4">
+                Lumina Wealth Management
+              </h3>
+              <div
+                class="h-0 group-hover:h-12 overflow-hidden transition-all duration-500"
+              >
+                <button
+                  class="text-on-surface flex items-center gap-2 group/btn"
+                >
+                  View Case Study
+                  <span
+                    class="material-symbols-outlined text-primary group-hover/btn:translate-x-2 transition-transform"
+                    data-icon="arrow_forward"
+                    >arrow_forward</span
+                  >
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- Project Card 2 -->
+          <div
+            class="md:col-span-4 group relative overflow-hidden rounded-xl bg-surface-container shadow-2xl transition-all duration-500 hover:-translate-y-2"
+          >
+            <div class="aspect-square w-full overflow-hidden">
+              <img
+                alt="EcoLife Mobile App"
+                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0 opacity-80 group-hover:opacity-100"
+                data-alt="Sleek smartphone displaying a minimal lifestyle mobile app"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuD6hkeaOtq3sXXb9HildjlvLKlcVHtBNoheDkn9KEjeiybKRWRtU1RupyYlf-7x6QnxTYRLBSEMXOPE63zGwRO18F0AvPopKry3rcaCrRjSziG22HqAsL8B0n4p10RI-Jbx7iAbDe7aHgd5EhLnq5G0JrHXyqBStMFbjZwXdaW5JnT5mwlcH6XWhcg5Opu5KqUkBbH3aH8d-l55vn248d3u8oVTzBdQYt2WE5KgLXi9O4g2OORx9y_G-kNFTJ_1z25esZ4bYdmtYRI"
+              />
+            </div>
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-transparent to-transparent opacity-60"
+            ></div>
+            <div class="absolute bottom-0 left-0 p-8 w-full">
+              <p
+                class="text-tertiary font-label text-xs uppercase tracking-[0.3em] mb-2"
+              >
+                Mobile iOS
+              </p>
+              <h3 class="font-headline text-2xl font-bold text-white">
+                EcoLife Platform
+              </h3>
+            </div>
+          </div>
+          <!-- Project Card 3 -->
+          <div
+            class="md:col-span-4 group relative overflow-hidden rounded-xl bg-surface-container shadow-2xl transition-all duration-500 hover:-translate-y-2"
+          >
+            <div class="aspect-square w-full overflow-hidden">
+              <img
+                alt="Vanguard UI Kit"
+                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0 opacity-80 group-hover:opacity-100"
+                data-alt="Abstract design system components and UI elements"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBL3l1c3oQg3of8Auks8eMzCDLP3U6BOq7XF-TTNBP4PyCHkvW0zcxYbcqMPAT04WBU0rUU0nbeTCJ8TL6yV4Au1_HwPZTK5SlaIO__MVwr9jJHs5kab6GeJcirzGADiFrjV05KgwbVqltOR9pIMJpqg8x972zHEQjRY9S7Pn-OLNBXb4FwS9qr8DjcUCdSd3L9YVLU8WlOPnASUps8etH4J1Vz4bfXldUv2H9nTMeQsOwXPWYDgnT6a3ZmTb2Rm0AhMLJHMRiPLFo"
+              />
+            </div>
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-transparent to-transparent opacity-60"
+            ></div>
+            <div class="absolute bottom-0 left-0 p-8 w-full">
+              <p
+                class="text-primary font-label text-xs uppercase tracking-[0.3em] mb-2"
+              >
+                Design System
+              </p>
+              <h3 class="font-headline text-2xl font-bold text-white">
+                Vanguard Core UI
+              </h3>
+            </div>
+          </div>
+          <!-- Project Card 4 (Large) -->
+          <div
+            class="md:col-span-8 group relative overflow-hidden rounded-xl bg-surface-container shadow-2xl transition-all duration-500 hover:-translate-y-2"
+          >
+            <div class="aspect-[16/9] w-full overflow-hidden">
+              <img
+                alt="Data Visualisation Project"
+                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0 opacity-80 group-hover:opacity-100"
+                data-alt="Complex data visualizations and charts on a large monitor"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBDXkNPMrz4KPKiNV08nLe0yTugFXrno_przjo1C2I_cI1VNbXuM53vQSdr84rnzMbG9ED68hzPIrffVdAfJ-2mvZN59Aa6hg9yOv89cMXWOX06JIKWTbscx1CMClHadDhKURFsRQYXDcEaheBrw0mmzkpw07yQ4xQ_LsZPR8iBBtYmCE6IAiVVdSl-dD2j7z-4LjVz_IjXXTI9K5M8NjrZZRW75WCo6tzHfzaJDX8A9SFj0eDBD_Ree0P40wH_bdi7YYogFIrTtAM"
+              />
+            </div>
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-transparent to-transparent opacity-60"
+            ></div>
+            <div class="absolute bottom-0 left-0 p-8 w-full">
+              <p
+                class="text-secondary font-label text-xs uppercase tracking-[0.3em] mb-2"
+              >
+                UI/UX Strategy
+              </p>
+              <h3 class="font-headline text-3xl font-bold text-white mb-4">
+                Aether Analytics Hub
+              </h3>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Success Stories (Editorial Layout) -->
+      <section class="bg-surface-container-low py-32 mb-32">
+        <div class="max-w-7xl mx-auto px-6">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-20 items-center">
+            <div>
+              <h2 class="font-headline text-5xl font-black text-wall mb-8">
+                Measurable <span class="text-secondary">Growth.</span>
+              </h2>
+              <p class="text-on-surface-variant text-lg leading-relaxed mb-12">
+                We measure success by the impact our partners achieve. Beyond
+                the aesthetics, our architectural approach drives real business
+                outcomes.
+              </p>
+              <div class="space-y-8">
+                <div class="flex items-start gap-6">
+                  <div class="text-primary font-headline text-4xl font-bold">
+                    240%
+                  </div>
+                  <div>
+                    <h4 class="font-bold text-on-surface">
+                      Increase in Conversion
+                    </h4>
+                    <p class="text-sm text-on-surface-variant">
+                      For Lumina Wealth through optimized UX flows.
+                    </p>
+                  </div>
+                </div>
+                <div class="flex items-start gap-6">
+                  <div class="text-secondary font-headline text-4xl font-bold">
+                    1.2M
+                  </div>
+                  <div>
+                    <h4 class="font-bold text-on-surface">
+                      Daily Active Users
+                    </h4>
+                    <p class="text-sm text-on-surface-variant">
+                      Supported by the scalable architecture of EcoLife.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="relative">
+              <div
+                class="absolute -inset-4 bg-gradient-to-tr from-primary/20 to-secondary/20 blur-3xl rounded-full"
+              ></div>
+              <div
+                class="relative bg-surface-container p-8 rounded-2xl border border-outline-variant/10 glass-effect"
+              >
+                <p class="text-on-surface italic text-xl mb-6">
+                  "GrowthGrid didn't just redesign our app; they redefined how
+                  our customers interact with our brand. The results were
+                  immediate and overwhelming."
+                </p>
+                <div class="flex items-center gap-4">
+                  <div
+                    class="w-12 h-12 rounded-full bg-surface-bright overflow-hidden"
+                  >
+                    <img
+                      alt="Client Avatar"
+                      class="w-full h-full object-cover"
+                      data-alt="Portrait of a business executive"
+                      src="https://lh3.googleusercontent.com/aida-public/AB6AXuBCw4biXf1VwCueZh2a58OTJXSxvvwMfrVcnqYX8TQHBgeOn2aFtpUecwo1zPCKkH4VPO453aBeTrFK5fHHa6n0SnyqwMfwb80wkld8zaGJpz01Jc0PDf4vyLNKZ15ZnAC8z1KO6ROr_OSuKyX93Dl9lzEpFIxCHLZucU3BACVAicwfvuBoN9V-KUnG3Roifunug4NLVZrRtX3IBwudJMvLWIjV6KCn1X_C1Znyg4B6HLdDXC1VxuM-a2VxYPqaD0_l5PYddpZ_vrw"
+                    />
+                  </div>
+                  <div>
+                    <p class="font-bold text-on-surface">Marcus Chen</p>
+                    <p
+                      class="text-xs text-on-surface-variant uppercase tracking-widest"
+                    >
+                      CEO, Aether Analytics
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Contact CTA -->
+      <section class="max-w-7xl mx-auto px-6 mb-32">
+        <div
+          class="relative overflow-hidden rounded-3xl bg-surface-container-highest p-12 md:p-24 text-center"
+        >
+          <div
+            class="absolute top-0 right-0 -translate-y-1/2 translate-x-1/2 w-96 h-96 bg-primary/10 blur-[120px] rounded-full"
+          ></div>
+          <div
+            class="absolute bottom-0 left-0 translate-y-1/2 -translate-x-1/2 w-96 h-96 bg-secondary/10 blur-[120px] rounded-full"
+          ></div>
+          <h2
+            class="relative font-headline text-4xl md:text-6xl font-black mb-8"
+          >
+            Have a project in <span class="text-primary">mind?</span>
+          </h2>
+          <p
+            class="relative text-on-surface-variant text-lg max-w-xl mx-auto mb-12"
+          >
+            Let's collaborate to build the next generation of digital
+            excellence. Your vision, architected by GrowthGrid.
+          </p>
+          <div class="relative flex flex-col md:flex-row gap-4 justify-center">
+            <button
+              class="px-10 py-5 bg-gradient-to-br from-primary to-primary-container text-on-primary rounded-full font-headline font-extrabold text-lg hover:shadow-[0_0_30px_rgba(133,173,255,0.4)] transition-all scale-100 active:scale-95"
+            >
+              Start Your Journey
+            </button>
+            <button
+              class="px-10 py-5 bg-surface-container rounded-full text-on-surface font-headline font-bold text-lg hover:bg-surface-bright transition-all"
+            >
+              View Pricing
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- Footer -->
+    <footer class="bg-slate-50 dark:bg-[#0f131e] w-full py-16 px-6">
+      <div
+        class="grid grid-cols-1 md:grid-cols-4 gap-12 max-w-7xl mx-auto font-['Inter'] text-sm leading-relaxed"
+      >
+        <div class="md:col-span-1">
+          <span
+            class="text-xl font-bold tracking-tighter text-slate-900 dark:text-white mb-4 block"
+            >GrowthGrid</span
+          >
+          <p class="text-slate-500 dark:text-slate-400">
+            Architecting digital impact through intentional design and technical
+            precision.
+          </p>
+        </div>
+        <div>
+          <h4
+            class="font-bold text-slate-900 dark:text-white mb-6 uppercase tracking-widest text-xs"
+          >
+            Explore
+          </h4>
+          <ul class="space-y-4">
+            <li>
+              <a
+                class="text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white hover:translate-x-1 transition-transform duration-200 block"
+                href="#"
+                >Portfolio</a
+              >
+            </li>
+            <li>
+              <a
+                class="text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white hover:translate-x-1 transition-transform duration-200 block"
+                href="#"
+                >Services</a
+              >
+            </li>
+            <li>
+              <a
+                class="text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white hover:translate-x-1 transition-transform duration-200 block"
+                href="#"
+                >Process</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h4
+            class="font-bold text-slate-900 dark:text-white mb-6 uppercase tracking-widest text-xs"
+          >
+            Connect
+          </h4>
+          <ul class="space-y-4">
+            <li>
+              <a
+                class="text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white hover:translate-x-1 transition-transform duration-200 block"
+                href="#"
+                >Email Us</a
+              >
+            </li>
+            <li>
+              <a
+                class="text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white hover:translate-x-1 transition-transform duration-200 block"
+                href="#"
+                >LinkedIn</a
+              >
+            </li>
+            <li>
+              <a
+                class="text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white hover:translate-x-1 transition-transform duration-200 block"
+                href="#"
+                >Instagram</a
+              >
+            </li>
+            <li>
+              <a
+                class="text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white hover:translate-x-1 transition-transform duration-200 block"
+                href="#"
+                >Twitter</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h4
+            class="font-bold text-slate-900 dark:text-white mb-6 uppercase tracking-widest text-xs"
+          >
+            Legal
+          </h4>
+          <ul class="space-y-4">
+            <li>
+              <a
+                class="text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white hover:translate-x-1 transition-transform duration-200 block"
+                href="#"
+                >Privacy Policy</a
+              >
+            </li>
+            <li>
+              <a
+                class="text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white hover:translate-x-1 transition-transform duration-200 block"
+                href="#"
+                >Terms of Service</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div
+        class="max-w-7xl mx-auto mt-16 pt-8 border-t border-outline-variant/10 text-center"
+      >
+        <p class="text-slate-500 dark:text-slate-400">
+          © 2024 GrowthGrid Digital. All rights reserved.
+        </p>
+      </div>
+    </footer>    <script>
+      const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+      const mobileMenu = document.getElementById('mobile-menu');
+      const menuIcon = document.getElementById('menu-icon');
+      const closeIcon = document.getElementById('close-icon');
+      
+      if (mobileMenuBtn) {
+        mobileMenuBtn.addEventListener('click', () => {
+          mobileMenu.classList.toggle('hidden');
+          menuIcon.classList.toggle('hidden');
+          closeIcon.classList.toggle('hidden');
+        });
+        
+        // Close menu when a link is clicked
+        const menuLinks = mobileMenu.querySelectorAll('a');
+        menuLinks.forEach(link => {
+          link.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+            menuIcon.classList.remove('hidden');
+            closeIcon.classList.add('hidden');
+          });
+        });
+      }
+    </script>  </body>
+</html>

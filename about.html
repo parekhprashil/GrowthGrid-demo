@@ -1,0 +1,726 @@
+<!doctype html>
+
+<html class="dark" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>About GrowthGrid | Scaling Your Digital Future</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;400;500;700;800&amp;family=Inter:wght@300;400;500;600&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-tertiary": "#722070",
+              "on-primary-fixed-variant": "#002a62",
+              primary: "#85adff",
+              "on-secondary-fixed-variant": "#7511c3",
+              "on-surface": "#e5e7f6",
+              "tertiary-fixed": "#fe9cf4",
+              "on-tertiary-container": "#661466",
+              tertiary: "#ffb4f4",
+              "primary-fixed-dim": "#5391ff",
+              "tertiary-container": "#fe9cf4",
+              "secondary-fixed": "#e5c6ff",
+              "secondary-fixed-dim": "#dbb4ff",
+              "on-background": "#e5e7f6",
+              "error-dim": "#d7383b",
+              surface: "#0a0e18",
+              "surface-dim": "#0a0e18",
+              "primary-dim": "#699cff",
+              "secondary-dim": "#9c48ea",
+              "surface-bright": "#262c3c",
+              "surface-container-high": "#1a1f2d",
+              "on-error-container": "#ffa8a3",
+              "on-surface-variant": "#a7aab9",
+              "tertiary-dim": "#ef8fe5",
+              "surface-container-low": "#0f131e",
+              "on-error": "#490006",
+              outline: "#727582",
+              "primary-container": "#6e9fff",
+              background: "#0a0e18",
+              "outline-variant": "#444854",
+              "on-secondary-fixed": "#4f0089",
+              "secondary-container": "#6f00be",
+              "on-primary": "#002c66",
+              "on-tertiary-fixed": "#480049",
+              "on-tertiary-fixed-variant": "#711f6f",
+              "on-primary-container": "#002150",
+              "inverse-on-surface": "#515561",
+              "inverse-surface": "#faf8ff",
+              "tertiary-fixed-dim": "#ef8fe5",
+              "surface-container-lowest": "#000000",
+              "primary-fixed": "#6e9fff",
+              "on-primary-fixed": "#000000",
+              "on-secondary-container": "#e9cdff",
+              secondary: "#c180ff",
+              "inverse-primary": "#005bc4",
+              "error-container": "#9f0519",
+              "on-secondary": "#33005b",
+              "surface-tint": "#85adff",
+              "surface-container-highest": "#202534",
+              error: "#ff716c",
+              "surface-variant": "#202534",
+              "surface-container": "#151926",
+            },
+            fontFamily: {
+              headline: ["Manrope"],
+              body: ["Inter"],
+              label: ["Inter"],
+            },
+            borderRadius: {
+              DEFAULT: "0.25rem",
+              lg: "0.5rem",
+              xl: "0.75rem",
+              full: "9999px",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      .material-symbols-outlined {
+        font-variation-settings:
+          "FILL" 0,
+          "wght" 400,
+          "GRAD" 0,
+          "opsz" 24;
+        display: inline-block;
+        vertical-align: middle;
+      }
+      .glass-card {
+        background: rgba(21, 25, 38, 0.4);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+      }
+    </style>
+  </head>
+  <body class="bg-surface text-on-surface font-body selection:bg-primary/30">
+    <!-- TopNavBar -->
+    <nav
+      class="fixed top-0 w-full z-50 bg-surface/80 dark:bg-[#0a0e18]/80 backdrop-blur-xl no-border shadow-[0_8px_30px_rgb(0,0,0,0.04)] dark:shadow-none h-20"
+    >
+      <div
+        class="flex justify-between items-center max-w-7xl mx-auto px-6 h-full"
+      >
+        <div
+          class="text-2xl font-black tracking-tighter text-slate-900 dark:text-white font-headline"
+        >
+          GrowthGrid
+        </div>
+        <div class="hidden md:flex items-center space-x-8">
+          <a
+            class="text-slate-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-[#85adff] transition-colors font-['Manrope'] font-medium tracking-tight text-sm"
+            href="index.html"
+            >Home</a
+          >
+          <a
+            class="text-blue-600 dark:text-[#85adff] font-bold border-b-2 border-blue-600 dark:border-[#85adff] pb-1 font-['Manrope'] tracking-tight text-sm"
+            href="about.html"
+            >About</a
+          >
+          <a
+            class="text-slate-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-[#85adff] transition-colors font-['Manrope'] font-medium tracking-tight text-sm"
+            href="services.html"
+            >Services</a
+          >
+          <a
+            class="text-slate-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-[#85adff] transition-colors font-['Manrope'] font-medium tracking-tight text-sm"
+            href="portfolio.html"
+            >Portfolio</a
+          >
+          <a
+            class="text-slate-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-[#85adff] transition-colors font-['Manrope'] font-medium tracking-tight text-sm"
+            href="process.html"
+            >Process</a
+          >
+          <a
+            class="text-slate-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-[#85adff] transition-colors font-['Manrope'] font-medium tracking-tight text-sm"
+            href="testimonials.html"
+            >Testimonials</a
+          >
+        </div>
+        <div class="flex items-center space-x-2 md:space-x-4">
+          <button
+            id="mobile-menu-btn"
+            class="md:hidden p-2 text-slate-600 dark:text-slate-400 hover:opacity-80 transition-all duration-300"
+          >
+            <span id="menu-icon" class="material-symbols-outlined">menu</span>
+            <span id="close-icon" class="material-symbols-outlined hidden">close</span>
+          </button>
+          <button
+            class="material-symbols-outlined text-on-surface-variant hover:opacity-80 transition-all duration-300 ease-in-out"
+          >
+            dark_mode
+          </button>
+          <button
+            class="bg-gradient-to-br from-primary to-primary-container text-on-primary font-bold px-6 py-2 rounded-full hover:opacity-90 scale-95 active:scale-90 transition-transform"
+          >
+            Contact
+          </button>
+        </div>
+      </div>
+      <!-- Mobile Menu -->
+      <div
+        id="mobile-menu"
+        class="hidden md:hidden absolute top-full left-0 right-0 bg-surface/95 dark:bg-[#0a0e18]/95 backdrop-blur-xl border-b border-outline-variant/20 shadow-lg"
+      >
+        <div class="max-w-7xl mx-auto px-6 py-4 space-y-2">
+          <a
+            class="block px-4 py-3 text-slate-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-[#85adff] hover:bg-on-surface/5 rounded-lg transition-colors"
+            href="index.html"
+            >Home</a
+          >
+          <a
+            class="block px-4 py-3 text-blue-600 dark:text-[#85adff] font-bold rounded-lg hover:bg-on-surface/5 transition-colors"
+            href="about.html"
+            >About</a
+          >
+          <a
+            class="block px-4 py-3 text-slate-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-[#85adff] hover:bg-on-surface/5 rounded-lg transition-colors"
+            href="services.html"
+            >Services</a
+          >
+          <a
+            class="block px-4 py-3 text-slate-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-[#85adff] hover:bg-on-surface/5 rounded-lg transition-colors"
+            href="portfolio.html"
+            >Portfolio</a
+          >
+          <a
+            class="block px-4 py-3 text-slate-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-[#85adff] hover:bg-on-surface/5 rounded-lg transition-colors"
+            href="process.html"
+            >Process</a
+          >
+          <a
+            class="block px-4 py-3 text-slate-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-[#85adff] hover:bg-on-surface/5 rounded-lg transition-colors"
+            href="testimonials.html"
+            >Testimonials</a
+          >
+        </div>
+      </div>
+    </nav>
+    <main class="pt-20">
+      <!-- Hero / Mission Statement -->
+      <section
+        class="relative min-h-[716px] flex items-center px-6 overflow-hidden"
+      >
+        <div
+          class="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-center"
+        >
+          <div class="lg:col-span-8">
+            <span
+              class="text-primary font-bold tracking-[0.2em] text-xs uppercase mb-6 block"
+              >Our Mission</span
+            >
+            <h1
+              class="text-6xl md:text-8xl font-black font-headline tracking-tighter leading-[0.9] text-on-surface mb-8"
+            >
+              Scaling Your <br />
+              <span
+                class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary"
+                >Digital Future</span
+              >
+            </h1>
+            <p
+              class="text-xl md:text-2xl text-on-surface-variant max-w-2xl font-light leading-relaxed"
+            >
+              We don't just build websites; we architect growth ecosystems. Our
+              mission is to bridge the gap between visionary ideas and global
+              market dominance through architectural precision.
+            </p>
+          </div>
+          <div class="lg:col-span-4 relative hidden lg:block">
+            <div
+              class="aspect-square bg-surface-container rounded-full flex items-center justify-center p-8 border border-outline-variant/10"
+            >
+              <div
+                class="w-full h-full rounded-full border-[1.5rem] border-primary/20 flex items-center justify-center"
+              >
+                <span
+                  class="material-symbols-outlined text-8xl text-primary"
+                  data-icon="rocket_launch"
+                  >rocket_launch</span
+                >
+              </div>
+            </div>
+            <!-- Absolute Decorative element -->
+            <div
+              class="absolute -top-12 -right-12 w-48 h-48 bg-secondary/10 blur-[100px] rounded-full"
+            ></div>
+          </div>
+        </div>
+      </section>
+      <!-- Our Story / Core Values -->
+      <section class="py-24 px-6 bg-surface-container-low">
+        <div class="max-w-7xl mx-auto">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-20">
+            <div>
+              <h2
+                class="text-4xl font-headline font-extrabold mb-12 text-on-surface"
+              >
+                The Origin of Precision
+              </h2>
+              <div
+                class="space-y-6 text-on-surface-variant leading-loose text-lg"
+              >
+                <p>
+                  Founded in 2014, GrowthGrid emerged from a simple observation:
+                  the digital landscape was becoming increasingly cluttered, yet
+                  devoid of soul. We set out to create an agency that combined
+                  the meticulousness of an architectural firm with the agility
+                  of a silicon-valley startup.
+                </p>
+                <p>
+                  For a decade, we have partnered with industry leaders to
+                  dismantle mediocre experiences and rebuild them as
+                  high-performance growth engines. Our journey is defined by a
+                  relentless pursuit of "The Perfect Grid"—where aesthetics and
+                  conversion meet in total harmony.
+                </p>
+              </div>
+            </div>
+            <div class="grid grid-cols-1 gap-4">
+              <div
+                class="glass-card p-10 rounded-xl border border-outline-variant/5"
+              >
+                <span
+                  class="material-symbols-outlined text-primary mb-4"
+                  data-icon="architecture"
+                  >architecture</span
+                >
+                <h3 class="text-xl font-headline font-bold mb-2">
+                  Intentional Design
+                </h3>
+                <p class="text-on-surface-variant text-sm">
+                  Every pixel serves a purpose. We reject decoration in favor of
+                  functional beauty that drives measurable ROI.
+                </p>
+              </div>
+              <div
+                class="glass-card p-10 rounded-xl border border-outline-variant/5"
+              >
+                <span
+                  class="material-symbols-outlined text-secondary mb-4"
+                  data-icon="data_exploration"
+                  >data_exploration</span
+                >
+                <h3 class="text-xl font-headline font-bold mb-2">
+                  Data-Driven Soul
+                </h3>
+                <p class="text-on-surface-variant text-sm">
+                  We use deep analytics to inform our creative decisions,
+                  ensuring our gut instincts are backed by hard evidence.
+                </p>
+              </div>
+              <div
+                class="glass-card p-10 rounded-xl border border-outline-variant/5"
+              >
+                <span
+                  class="material-symbols-outlined text-tertiary-dim mb-4"
+                  data-icon="all_inclusive"
+                  >all_inclusive</span
+                >
+                <h3 class="text-xl font-headline font-bold mb-2">
+                  Future Proofing
+                </h3>
+                <p class="text-on-surface-variant text-sm">
+                  Technologies change, but core human psychology remains. We
+                  build systems that adapt and scale for decades.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Stats Section -->
+      <section class="py-20 px-6">
+        <div
+          class="max-w-7xl mx-auto bg-surface-container rounded-3xl p-12 md:p-20 relative overflow-hidden"
+        >
+          <div class="grid grid-cols-2 gap-12 relative z-10 lg:grid-cols-3">
+            <div class="text-center lg:text-left">
+              <div
+                class="text-5xl md:text-6xl font-black font-headline text-primary mb-2"
+              >
+                10+
+              </div>
+              <div
+                class="text-on-surface-variant uppercase tracking-widest text-xs font-bold"
+              >
+                Years Experience
+              </div>
+            </div>
+            <div class="text-center lg:text-left">
+              <div
+                class="text-5xl md:text-6xl font-black font-headline text-secondary mb-2"
+              >
+                500+
+              </div>
+              <div
+                class="text-on-surface-variant uppercase tracking-widest text-xs font-bold"
+              >
+                Projects Delivered
+              </div>
+            </div>
+            <div class="text-center lg:text-left">
+              <div
+                class="text-5xl md:text-6xl font-black font-headline text-on-surface mb-2"
+              >
+                98%
+              </div>
+              <div
+                class="text-on-surface-variant uppercase tracking-widest text-xs font-bold"
+              >
+                Client Retention
+              </div>
+            </div>
+          </div>
+          <!-- Subtle background graphic -->
+          <div class="absolute inset-0 opacity-10 pointer-events-none">
+            <div
+              class="absolute top-0 left-0 w-full h-full"
+              style="
+                background-image: radial-gradient(
+                  circle at 2px 2px,
+                  #85adff 1px,
+                  transparent 0
+                );
+                background-size: 40px 40px;
+              "
+            ></div>
+          </div>
+        </div>
+      </section>
+      <!-- Team Section -->
+      <section class="py-32 px-6 overflow-visible">
+        <div class="max-w-7xl mx-auto">
+          <div
+            class="flex flex-col md:flex-row md:items-end justify-between mb-24 gap-8"
+          >
+            <div>
+              <span
+                class="text-primary font-bold tracking-[0.2em] text-xs uppercase mb-4 block"
+                >The Collective</span
+              >
+              <h2
+                class="text-5xl md:text-7xl font-headline font-black tracking-tighter text-on-surface"
+              >
+                Architects of Change
+              </h2>
+            </div>
+            <p class="max-w-md text-on-surface-variant text-lg">
+              A curated team of developers, designers, and strategists obsessed
+              with the intersection of technology and human behavior.
+            </p>
+          </div>
+          <!-- Overlapping Card Grid -->
+          <div
+            class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-4 relative min-h-[600px]"
+          >
+            <!-- Marcus Thorne -->
+            <div
+              class="group relative bg-surface-container-high rounded-3xl overflow-hidden border border-outline-variant/10 shadow-2xl transition-all duration-500 hover:-translate-y-4 lg:z-40 lg:h-[550px]"
+            >
+              <img
+                class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110 opacity-80 brightness-75 group-hover:brightness-100"
+                data-alt="Marcus Thorne"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDtTWBOfcX7LZMn8Gpv8pJCNVGjY3CacIhu0nHm102odeAzIVg4yGiZtXhR7LWFDm979LWuo7q_1WPYwu-toU2x7NIEFgxe8swALwyJMG9JTS51oBvH7ZgjShFqumaSNTw2V7jSu0RaNQWltlalco5vnjaZthXo5ih5BwLqulAO0To4mPSxpyr7Ufi71_Ij_ggoXvTPsv4pylefEDfJQm6VWZgZ7jWUzl7R6GZIgI038VhS2W2sHXi8N8NZhu1lHOQ0J4QeBnUv6Dw"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"
+              ></div>
+              <div class="absolute bottom-0 left-0 p-8 w-full">
+                <span
+                  class="text-primary text-[10px] uppercase tracking-widest font-bold mb-1 block"
+                  >Founding Partner</span
+                >
+                <h3
+                  class="text-2xl font-headline font-bold text-white leading-none mb-1"
+                >
+                  Marcus Thorne
+                </h3>
+                <p class="text-on-surface-variant text-sm">Creative Director</p>
+              </div>
+            </div>
+            <!-- Elena Vance -->
+            <div
+              class="group relative bg-surface-container-high rounded-3xl overflow-hidden border border-outline-variant/10 shadow-2xl transition-all duration-500 hover:-translate-y-4 lg:z-30 lg:h-[480px] lg:mt-12 lg:-ml-8"
+            >
+              <img
+                class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110 opacity-80 brightness-75 group-hover:brightness-100"
+                data-alt="Elena Vance"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCzWMJxindxxpzqUZ5P2l9VguNZx_L2FEghAkSG7oCl7yz84r0INcgP3mDnE2-3_e75MyZzUSgFfu9ShNpgC-RPySPpp_FH06KPWjPmhPtrnPMaDASipsa-zSgcPmv1LQE0E71fXmEOGWDARwJmcbjBU1UOv-BweWM8tMvq1RxHITtm-ngfQCPGxpL2hpL7bFbaPQhzpnsI92w050o30CdHfmt5UnGFzD-rEZ9WMO2jMcsWaJuUVqNR3xx3Tx06ysCVtdyRlK2bick"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"
+              ></div>
+              <div class="absolute bottom-0 left-0 p-8 w-full">
+                <span
+                  class="text-secondary text-[10px] uppercase tracking-widest font-bold mb-1 block"
+                  >Strategy Lead</span
+                >
+                <h3
+                  class="text-2xl font-headline font-bold text-white leading-none mb-1"
+                >
+                  Elena Vance
+                </h3>
+                <p class="text-on-surface-variant text-sm">Market Analyst</p>
+              </div>
+            </div>
+            <!-- David Chen -->
+            <div
+              class="group relative bg-surface-container-high rounded-3xl overflow-hidden border border-outline-variant/10 shadow-2xl transition-all duration-500 hover:-translate-y-4 lg:z-20 lg:h-[520px] lg:-mt-8 lg:-ml-12"
+            >
+              <img
+                class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110 opacity-80 brightness-75 group-hover:brightness-100"
+                data-alt="David Chen"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDlRGiGWdcT-CqOoUczTaFa8Xs-1wlIDOi5UAqA10MxOTqdjWbFrF5oPVYdp3HXsHhGnXusakj6pHqsqCR3fCVGO_UOV4WAnbq0o-Z7w1BRD9NOAlBgV9uiC2QSzrJgdE5zjWDJJg3pxoPmIgwKHooduc5rfg6Yo3EfwrX0FZpiQHT4flIBw_Z2gxbsoPz2mLY2ykz7wfJePr4JcxIKdaX_C5myuY4WVh5V49EMt0k1KwqU1_VSY0EQKX8pUvBtn9RYi4jd6_wVoQ8"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"
+              ></div>
+              <div class="absolute bottom-0 left-0 p-8 w-full">
+                <span
+                  class="text-tertiary text-[10px] uppercase tracking-widest font-bold mb-1 block"
+                  >Engineering</span
+                >
+                <h3
+                  class="text-2xl font-headline font-bold text-white leading-none mb-1"
+                >
+                  David Chen
+                </h3>
+                <p class="text-on-surface-variant text-sm">
+                  Technical Architect
+                </p>
+              </div>
+            </div>
+            <!-- Sarah Jenkins -->
+            <div
+              class="group relative bg-surface-container-high rounded-3xl overflow-hidden border border-outline-variant/10 shadow-2xl transition-all duration-500 hover:-translate-y-4 lg:z-10 lg:h-[460px] lg:mt-24 lg:-ml-16"
+            >
+              <img
+                class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110 opacity-80 brightness-75 group-hover:brightness-100"
+                data-alt="Sarah Jenkins"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDndXpZq-Ea3Iq1v-vV-vS1yX-p1R5G1p9oX9n1p5-P1r1R5G1p9oX9n1p5-P1r1R5G1p9oX9n1p5-P1r1R5G1p9oX9n1p5-P1r"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"
+              ></div>
+              <div class="absolute bottom-0 left-0 p-8 w-full">
+                <span
+                  class="text-primary-dim text-[10px] uppercase tracking-widest font-bold mb-1 block"
+                  >UI/UX Lead</span
+                >
+                <h3
+                  class="text-2xl font-headline font-bold text-white leading-none mb-1"
+                >
+                  Sarah Jenkins
+                </h3>
+                <p class="text-on-surface-variant text-sm">
+                  Experience Designer
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- CTA Section -->
+      <section class="py-32 px-6">
+        <div class="max-w-4xl mx-auto text-center">
+          <h2
+            class="text-5xl md:text-7xl font-headline font-black tracking-tighter text-on-surface mb-8"
+          >
+            Ready to work with us?
+          </h2>
+          <p class="text-xl text-on-surface-variant mb-12 max-w-2xl mx-auto">
+            Take the first step toward a high-performance digital presence.
+            Let's build something that scales.
+          </p>
+          <div
+            class="flex flex-col sm:flex-row items-center justify-center gap-6"
+          >
+            <button
+              class="w-full sm:w-auto px-10 py-5 rounded-full bg-gradient-to-r from-primary to-primary-container text-on-primary font-bold text-lg hover:shadow-[0_0_30px_rgba(133,173,255,0.3)] transition-all"
+            >
+              Start Your Project
+            </button>
+            <button
+              class="w-full sm:w-auto px-10 py-5 rounded-full bg-on-surface/10 backdrop-blur-md text-on-surface font-bold text-lg hover:bg-on-surface/20 transition-all"
+            >
+              View Our Work
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script>
+      const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+      const mobileMenu = document.getElementById('mobile-menu');
+      const menuIcon = document.getElementById('menu-icon');
+      const closeIcon = document.getElementById('close-icon');
+      
+      if (mobileMenuBtn) {
+        mobileMenuBtn.addEventListener('click', () => {
+          mobileMenu.classList.toggle('hidden');
+          menuIcon.classList.toggle('hidden');
+          closeIcon.classList.toggle('hidden');
+        });
+        
+        // Close menu when a link is clicked
+        const menuLinks = mobileMenu.querySelectorAll('a');
+        menuLinks.forEach(link => {
+          link.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+            menuIcon.classList.remove('hidden');
+            closeIcon.classList.add('hidden');
+          });
+        });
+      }
+    </script>
+    <!-- Footer -->
+    <footer class="w-full py-16 px-6 bg-slate-50 dark:bg-[#0f131e] tonal-shift">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-12 max-w-7xl mx-auto">
+        <div class="md:col-span-1">
+          <span
+            class="text-xl font-bold tracking-tighter text-slate-900 dark:text-white mb-4 block font-headline"
+            >GrowthGrid</span
+          >
+          <p
+            class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed mb-6"
+          >
+            Architecting digital futures through precision design and
+            high-performance engineering.
+          </p>
+          <div class="flex space-x-4">
+            <span
+              class="material-symbols-outlined text-slate-400 cursor-pointer hover:text-primary transition-colors"
+              >public</span
+            >
+            <span
+              class="material-symbols-outlined text-slate-400 cursor-pointer hover:text-primary transition-colors"
+              >language</span
+            >
+            <span
+              class="material-symbols-outlined text-slate-400 cursor-pointer hover:text-primary transition-colors"
+              >hub</span
+            >
+          </div>
+        </div>
+        <div class="md:col-span-1">
+          <h4
+            class="font-headline font-bold text-on-surface mb-6 uppercase tracking-widest text-xs"
+          >
+            Navigation
+          </h4>
+          <ul class="space-y-4">
+            <li>
+              <a
+                class="text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white hover:translate-x-1 transition-transform duration-200 block text-sm"
+                href="#"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a
+                class="text-blue-600 dark:text-[#85adff] underline text-sm"
+                href="#"
+                >About</a
+              >
+            </li>
+            <li>
+              <a
+                class="text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white hover:translate-x-1 transition-transform duration-200 block text-sm"
+                href="#"
+                >Services</a
+              >
+            </li>
+            <li>
+              <a
+                class="text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white hover:translate-x-1 transition-transform duration-200 block text-sm"
+                href="#"
+                >Portfolio</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="md:col-span-1">
+          <h4
+            class="font-headline font-bold text-on-surface mb-6 uppercase tracking-widest text-xs"
+          >
+            Connect
+          </h4>
+          <ul class="space-y-4">
+            <li>
+              <a
+                class="text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white hover:translate-x-1 transition-transform duration-200 block text-sm"
+                href="#"
+                >LinkedIn</a
+              >
+            </li>
+            <li>
+              <a
+                class="text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white hover:translate-x-1 transition-transform duration-200 block text-sm"
+                href="#"
+                >Twitter</a
+              >
+            </li>
+            <li>
+              <a
+                class="text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white hover:translate-x-1 transition-transform duration-200 block text-sm"
+                href="#"
+                >Instagram</a
+              >
+            </li>
+            <li>
+              <a
+                class="text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white hover:translate-x-1 transition-transform duration-200 block text-sm"
+                href="#"
+                >Email Us</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="md:col-span-1">
+          <h4
+            class="font-headline font-bold text-on-surface mb-6 uppercase tracking-widest text-xs"
+          >
+            Legal
+          </h4>
+          <ul class="space-y-4">
+            <li>
+              <a
+                class="text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white hover:translate-x-1 transition-transform duration-200 block text-sm"
+                href="#"
+                >Privacy Policy</a
+              >
+            </li>
+            <li>
+              <a
+                class="text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white hover:translate-x-1 transition-transform duration-200 block text-sm"
+                href="#"
+                >Terms of Service</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div
+        class="max-w-7xl mx-auto mt-16 pt-8 border-t border-outline-variant/10 text-center md:text-left"
+      >
+        <p class="text-slate-500 dark:text-slate-400 text-xs">
+          © 2024 GrowthGrid Digital. All rights reserved.
+        </p>
+      </div>
+    </footer>
+  </body>
+  </body>
+</html>
