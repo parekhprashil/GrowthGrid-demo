@@ -28,7 +28,7 @@
               "on-primary-fixed-variant": "#002a62",
               primary: "#85adff",
               "on-secondary-fixed-variant": "#7511c3",
-              "on-surface": "#e5e7f6",
+              "on-surface": "rgb(var(--on-surface) / <alpha-value>)",
               "tertiary-fixed": "#fe9cf4",
               "on-tertiary-container": "#661466",
               tertiary: "#ffb4f4",
@@ -36,33 +36,33 @@
               "tertiary-container": "#fe9cf4",
               "secondary-fixed": "#e5c6ff",
               "secondary-fixed-dim": "#dbb4ff",
-              "on-background": "#e5e7f6",
+              "on-background": "rgb(var(--on-background) / <alpha-value>)",
               "error-dim": "#d7383b",
-              surface: "#0a0e18",
-              "surface-dim": "#0a0e18",
+              surface: "rgb(var(--surface) / <alpha-value>)",
+              "surface-dim": "rgb(var(--surface-dim) / <alpha-value>)",
               "primary-dim": "#699cff",
               "secondary-dim": "#9c48ea",
-              "surface-bright": "#262c3c",
-              "surface-container-high": "#1a1f2d",
+              "surface-bright": "rgb(var(--surface-bright) / <alpha-value>)",
+              "surface-container-high": "rgb(var(--surface-container-high) / <alpha-value>)",
               "on-error-container": "#ffa8a3",
-              "on-surface-variant": "#a7aab9",
+              "on-surface-variant": "rgb(var(--on-surface-variant) / <alpha-value>)",
               "tertiary-dim": "#ef8fe5",
-              "surface-container-low": "#0f131e",
+              "surface-container-low": "rgb(var(--surface-container-low) / <alpha-value>)",
               "on-error": "#490006",
-              outline: "#727582",
+              outline: "rgb(var(--outline) / <alpha-value>)",
               "primary-container": "#6e9fff",
-              background: "#0a0e18",
-              "outline-variant": "#444854",
+              background: "rgb(var(--background) / <alpha-value>)",
+              "outline-variant": "rgb(var(--outline-variant) / <alpha-value>)",
               "on-secondary-fixed": "#4f0089",
               "secondary-container": "#6f00be",
               "on-primary": "#002c66",
               "on-tertiary-fixed": "#480049",
               "on-tertiary-fixed-variant": "#711f6f",
               "on-primary-container": "#002150",
-              "inverse-on-surface": "#515561",
-              "inverse-surface": "#faf8ff",
+              "inverse-on-surface": "rgb(var(--inverse-on-surface) / <alpha-value>)",
+              "inverse-surface": "rgb(var(--inverse-surface) / <alpha-value>)",
               "tertiary-fixed-dim": "#ef8fe5",
-              "surface-container-lowest": "#000000",
+              "surface-container-lowest": "rgb(var(--surface-container-lowest) / <alpha-value>)",
               "primary-fixed": "#6e9fff",
               "on-primary-fixed": "#000000",
               "on-secondary-container": "#e9cdff",
@@ -71,10 +71,10 @@
               "error-container": "#9f0519",
               "on-secondary": "#33005b",
               "surface-tint": "#85adff",
-              "surface-container-highest": "#202534",
+              "surface-container-highest": "rgb(var(--surface-container-highest) / <alpha-value>)",
               error: "#ff716c",
-              "surface-variant": "#202534",
-              "surface-container": "#151926",
+              "surface-variant": "rgb(var(--surface-variant) / <alpha-value>)",
+              "surface-container": "rgb(var(--surface-container) / <alpha-value>)",
             },
             fontFamily: {
               headline: ["Manrope"],
@@ -99,8 +99,48 @@
           "GRAD" 0,
           "opsz" 24;
       }
+
+      :root {
+        --background: 248 250 252; /* #f8fafc */
+        --surface: 248 250 252; /* #f8fafc */
+        --on-background: 15 23 42; /* slate-900 */
+        --on-surface: 15 23 42;
+        --surface-dim: 226 232 240; /* slate-200-ish */
+        --surface-bright: 255 255 255;
+        --surface-container-lowest: 255 255 255;
+        --surface-container-low: 241 245 249; /* slate-100 */
+        --surface-container-high: 241 245 249;
+        --surface-container-highest: 226 232 240;
+        --surface-container: 255 255 255;
+        --surface-variant: 226 232 240;
+        --on-surface-variant: 71 85 105; /* slate-600 */
+        --outline: 148 163 184; /* slate-400 */
+        --outline-variant: 203 213 225; /* slate-300-ish */
+        --inverse-surface: 10 14 24; /* #0a0e18 */
+        --inverse-on-surface: 229 231 246;
+      }
+
+      html.dark {
+        --background: 10 14 24; /* #0a0e18 */
+        --surface: 10 14 24;
+        --on-background: 229 231 246; /* #e5e7f6 */
+        --on-surface: 229 231 246;
+        --surface-dim: 10 14 24;
+        --surface-bright: 38 44 60; /* #262c3c */
+        --surface-container-lowest: 0 0 0;
+        --surface-container-low: 15 19 30; /* #0f131e */
+        --surface-container-high: 26 31 45; /* #1a1f2d */
+        --surface-container-highest: 32 37 52; /* #202534 */
+        --surface-container: 21 25 38; /* #151926 */
+        --surface-variant: 32 37 52;
+        --on-surface-variant: 167 170 185; /* #a7aab9 */
+        --outline: 114 117 130; /* #727582 */
+        --outline-variant: 68 72 84; /* #444854 */
+        --inverse-surface: 250 248 255; /* #faf8ff */
+        --inverse-on-surface: 81 85 97; /* #515561 */
+      }
       .glass-card {
-        background: rgba(21, 25, 38, 0.6);
+        background: rgb(var(--surface-container) / 0.6);
         backdrop-filter: blur(12px);
       }
       .kinetic-gradient {
@@ -164,9 +204,18 @@
             <span id="close-icon" class="material-symbols-outlined hidden">close</span>
           </button>
           <button
-            class="material-symbols-outlined text-on-surface-variant hover:opacity-80 transition-all duration-300 ease-in-out"
+            id="theme-toggle"
+            type="button"
+            aria-label="Toggle theme"
+            aria-pressed="true"
+            class="p-2 text-on-surface-variant hover:opacity-80 transition-all duration-300 ease-in-out"
           >
-            dark_mode
+            <span id="theme-icon-moon" class="material-symbols-outlined">dark_mode</span>
+            <span
+              id="theme-icon-sun"
+              class="material-symbols-outlined hidden"
+              >light_mode</span
+            >
           </button>
           <button
             class="bg-primary text-on-primary font-bold px-6 py-2 rounded-full scale-95 active:scale-90 transition-transform hover:shadow-[0_0_20px_rgba(133,173,255,0.3)]"
@@ -455,97 +504,89 @@
         </div>
       </section>
     </main>
-    <!-- Footer Shell -->
-    <footer class="bg-slate-50 dark:bg-[#0f131e] w-full py-16 px-6">
-      <div
-        class="grid grid-cols-1 md:grid-cols-4 gap-12 max-w-7xl mx-auto font-['Inter'] text-sm leading-relaxed"
-      >
+        <!-- Footer -->
+    <footer class="bg-surface text-on-surface w-full py-16 px-6 text-sm leading-relaxed">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-12 max-w-7xl mx-auto">
         <div class="md:col-span-1">
-          <span
-            class="text-xl font-bold tracking-tighter text-slate-900 dark:text-white mb-4 block"
-            >GrowthGrid</span
-          >
-          <p class="text-slate-500 dark:text-slate-400">
-            Architecting high-growth digital ecosystems with precision and
-            purpose.
+          <span class="text-2xl font-black tracking-tight text-on-surface mb-4 block">GrowthGrid</span>
+          <p class="text-on-surface-variant text-sm leading-relaxed mb-6 max-w-xs">
+            Architecting digital futures through precision design and high-performance engineering.
           </p>
+          <div class="flex items-center gap-3">
+            <span class="material-symbols-outlined text-outline-variant hover:text-primary transition-colors">public</span>
+            <span class="material-symbols-outlined text-outline-variant hover:text-primary transition-colors">language</span>
+            <span class="material-symbols-outlined text-outline-variant hover:text-primary transition-colors">hub</span>
+          </div>
         </div>
         <div>
-          <h4 class="font-bold text-slate-900 dark:text-white mb-6">Connect</h4>
-          <ul class="space-y-4">
-            <li>
-              <a
-                class="text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white hover:translate-x-1 transition-transform duration-200 block"
-                href="#"
-                >Email Us</a
-              >
-            </li>
-            <li>
-              <a
-                class="text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white hover:translate-x-1 transition-transform duration-200 block"
-                href="#"
-                >LinkedIn</a
-              >
-            </li>
-            <li>
-              <a
-                class="text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white hover:translate-x-1 transition-transform duration-200 block"
-                href="#"
-                >Instagram</a
-              >
-            </li>
-            <li>
-              <a
-                class="text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white hover:translate-x-1 transition-transform duration-200 block"
-                href="#"
-                >Twitter</a
-              >
-            </li>
+          <h4 class="font-semibold text-on-surface mb-6 uppercase tracking-widest text-xs">Navigation</h4>
+          <ul class="space-y-3">
+            <li><a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Home</a></li>
+            <li><a class="text-on-surface-variant hover:text-primary transition-colors" href="#">About</a></li>
+            <li><a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Services</a></li>
+            <li><a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Portfolio</a></li>
           </ul>
         </div>
         <div>
-          <h4 class="font-bold text-slate-900 dark:text-white mb-6">Legal</h4>
-          <ul class="space-y-4">
-            <li>
-              <a
-                class="text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white hover:translate-x-1 transition-transform duration-200 block"
-                href="#"
-                >Privacy Policy</a
-              >
-            </li>
-            <li>
-              <a
-                class="text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white hover:translate-x-1 transition-transform duration-200 block"
-                href="#"
-                >Terms of Service</a
-              >
-            </li>
+          <h4 class="font-semibold text-on-surface mb-6 uppercase tracking-widest text-xs">Connect</h4>
+          <ul class="space-y-3">
+            <li><a class="text-on-surface-variant hover:text-primary transition-colors" href="#">LinkedIn</a></li>
+            <li><a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Twitter</a></li>
+            <li><a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Instagram</a></li>
+            <li><a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Email Us</a></li>
           </ul>
         </div>
         <div>
-          <h4 class="font-bold text-slate-900 dark:text-white mb-6">Studio</h4>
-          <p class="text-slate-500 dark:text-slate-400">
-            256 Digital Park<br />
-            Suite 400<br />
-            San Francisco, CA 94103
-          </p>
+          <h4 class="font-semibold text-on-surface mb-6 uppercase tracking-widest text-xs">Legal</h4>
+          <ul class="space-y-3">
+            <li><a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Privacy Policy</a></li>
+            <li><a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Terms of Service</a></li>
+          </ul>
         </div>
       </div>
-      <div
-        class="max-w-7xl mx-auto mt-16 pt-8 border-t border-slate-200 dark:border-slate-800 flex justify-between items-center text-slate-400"
-      >
-        <p>© 2024 GrowthGrid Digital. All rights reserved.</p>
-        <div class="flex gap-6">
-          <span class="material-symbols-outlined text-sm" data-icon="language"
-            >language</span
-          >
-          <span class="material-symbols-outlined text-sm" data-icon="verified"
-            >verified</span
-          >
+      <div class="max-w-7xl mx-auto mt-16 pt-8 border-t border-outline-variant/60 flex flex-col md:flex-row justify-between items-center gap-4">
+        <p class="text-on-surface-variant text-xs"> 2024 GrowthGrid Digital. All rights reserved.</p>
+        <div class="flex gap-6 text-xs text-on-surface-variant">
+          <span>Terms of Service</span>
+          <span>Cookie Policy</span>
         </div>
       </div>
     </footer>
     <script>
+      // Theme toggle: dark-first default, persists via localStorage.
+      const themeToggle = document.getElementById("theme-toggle");
+      const themeIconMoon = document.getElementById("theme-icon-moon");
+      const themeIconSun = document.getElementById("theme-icon-sun");
+      const root = document.documentElement;
+
+      const savedTheme = localStorage.getItem("theme"); // "light" | "dark"
+      if (savedTheme === "light") root.classList.remove("dark");
+      else root.classList.add("dark"); // dark-first default
+
+      function syncThemeUi() {
+        const isDark = root.classList.contains("dark");
+        if (themeToggle) themeToggle.setAttribute("aria-pressed", String(isDark));
+        if (themeIconMoon && themeIconSun) {
+          themeIconMoon.classList.toggle("hidden", !isDark);
+          themeIconSun.classList.toggle("hidden", isDark);
+        }
+      }
+      syncThemeUi();
+
+      if (themeToggle) {
+        themeToggle.addEventListener("click", () => {
+          const isDark = root.classList.contains("dark");
+          if (isDark) {
+            root.classList.remove("dark");
+            localStorage.setItem("theme", "light");
+          } else {
+            root.classList.add("dark");
+            localStorage.setItem("theme", "dark");
+          }
+          syncThemeUi();
+        });
+      }
+
       const mobileMenuBtn = document.getElementById('mobile-menu-btn');
       const mobileMenu = document.getElementById('mobile-menu');
       const menuIcon = document.getElementById('menu-icon');
@@ -571,3 +612,4 @@
     </script>
   </body>
 </html>
+
