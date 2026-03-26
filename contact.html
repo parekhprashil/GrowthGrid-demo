@@ -1,0 +1,566 @@
+<!doctype html>
+
+<html class="dark" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Contact GrowthGrid | Digital Excellence</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-tertiary": "#722070",
+              "on-primary-fixed-variant": "#002a62",
+              primary: "#85adff",
+              "on-secondary-fixed-variant": "#7511c3",
+              "on-surface": "#e5e7f6",
+              "tertiary-fixed": "#fe9cf4",
+              "on-tertiary-container": "#661466",
+              tertiary: "#ffb4f4",
+              "primary-fixed-dim": "#5391ff",
+              "tertiary-container": "#fe9cf4",
+              "secondary-fixed": "#e5c6ff",
+              "secondary-fixed-dim": "#dbb4ff",
+              "on-background": "#e5e7f6",
+              "error-dim": "#d7383b",
+              surface: "#0a0e18",
+              "surface-dim": "#0a0e18",
+              "primary-dim": "#699cff",
+              "secondary-dim": "#9c48ea",
+              "surface-bright": "#262c3c",
+              "surface-container-high": "#1a1f2d",
+              "on-error-container": "#ffa8a3",
+              "on-surface-variant": "#a7aab9",
+              "tertiary-dim": "#ef8fe5",
+              "surface-container-low": "#0f131e",
+              "on-error": "#490006",
+              outline: "#727582",
+              "primary-container": "#6e9fff",
+              background: "#0a0e18",
+              "outline-variant": "#444854",
+              "on-secondary-fixed": "#4f0089",
+              "secondary-container": "#6f00be",
+              "on-primary": "#002c66",
+              "on-tertiary-fixed": "#480049",
+              "on-tertiary-fixed-variant": "#711f6f",
+              "on-primary-container": "#002150",
+              "inverse-on-surface": "#515561",
+              "inverse-surface": "#faf8ff",
+              "tertiary-fixed-dim": "#ef8fe5",
+              "surface-container-lowest": "#000000",
+              "primary-fixed": "#6e9fff",
+              "on-primary-fixed": "#000000",
+              "on-secondary-container": "#e9cdff",
+              secondary: "#c180ff",
+              "inverse-primary": "#005bc4",
+              "error-container": "#9f0519",
+              "on-secondary": "#33005b",
+              "surface-tint": "#85adff",
+              "surface-container-highest": "#202534",
+              error: "#ff716c",
+              "surface-variant": "#202534",
+              "surface-container": "#151926",
+            },
+            fontFamily: {
+              headline: ["Manrope"],
+              body: ["Inter"],
+              label: ["Inter"],
+            },
+            borderRadius: {
+              DEFAULT: "0.25rem",
+              lg: "0.5rem",
+              xl: "0.75rem",
+              full: "9999px",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      .material-symbols-outlined {
+        font-variation-settings:
+          "FILL" 0,
+          "wght" 400,
+          "GRAD" 0,
+          "opsz" 24;
+        vertical-align: middle;
+      }
+      .glass-panel {
+        background: rgba(21, 25, 38, 0.7);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+      }
+      .text-gradient {
+        background: linear-gradient(135deg, #85adff 0%, #6e9fff 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      .cta-gradient {
+        background: linear-gradient(135deg, #85adff 0%, #6e9fff 100%);
+      }
+    </style>
+  </head>
+  <body class="bg-surface text-on-surface font-body selection:bg-primary/30">
+    <!-- TopNavBar -->
+    <nav
+      class="fixed top-0 w-full z-50 bg-surface/80 dark:bg-[#0a0e18]/80 backdrop-blur-xl no-border shadow-[0_8px_30px_rgb(0,0,0,0.04)] dark:shadow-none h-20"
+    >
+      <div
+        class="flex justify-between items-center max-w-7xl mx-auto px-6 h-full"
+      >
+        <div
+          class="text-2xl font-black tracking-tighter text-slate-900 dark:text-white"
+        >
+          GrowthGrid
+        </div>
+        <div
+          class="hidden md:flex items-center gap-8 font-['Manrope'] font-medium tracking-tight text-sm"
+        >
+          <a
+            class="text-slate-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-[#85adff] transition-colors"
+            href="index.html"
+            >Home</a
+          >
+          <a
+            class="text-slate-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-[#85adff] transition-colors"
+            href="about.html"
+            >About</a
+          >
+          <a
+            class="text-slate-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-[#85adff] transition-colors"
+            href="services.html"
+            >Services</a
+          >
+          <a
+            class="text-slate-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-[#85adff] transition-colors"
+            href="portfolio.html"
+            >Portfolio</a
+          >
+          <a
+            class="text-slate-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-[#85adff] transition-colors"
+            href="process.html"
+            >Process</a
+          >
+          <!-- <a
+            class="text-slate-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-[#85adff] transition-colors"
+            href="testimonials.html"
+            >Testimonials</a
+          > -->
+        </div>
+        <div class="flex items-center gap-6">
+          <button
+            class="text-slate-600 dark:text-slate-400 hover:opacity-80 transition-all duration-300 ease-in-out scale-95 active:scale-90"
+          >
+            <span class="material-symbols-outlined" data-icon="dark_mode"
+              >dark_mode</span
+            >
+          </button>
+          <button
+            class="bg-primary px-6 py-2.5 rounded-full text-on-primary font-bold text-sm hover:opacity-90 transition-all duration-300 scale-95 active:scale-90"
+          >
+            Contact
+          </button>
+        </div>
+      </div>
+    </nav>
+    <main class="pt-32 pb-24">
+      <div class="max-w-7xl mx-auto px-6">
+        <!-- Hero / Let's Talk CTA Section -->
+        <section class="mb-24">
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-end">
+            <div>
+              <span
+                class="text-primary font-bold tracking-widest text-xs uppercase mb-4 block"
+                >GET IN TOUCH</span
+              >
+              <h1
+                class="font-headline text-5xl md:text-7xl font-extrabold tracking-tighter leading-[0.9] text-on-surface mb-8"
+              >
+                Let’s build your <br /><span class="text-gradient"
+                  >digital future</span
+                >
+                together.
+              </h1>
+              <p
+                class="text-on-surface-variant text-lg max-w-lg leading-relaxed"
+              >
+                Whether you're starting a new venture or scaling an existing
+                one, our team is ready to provide the architectural precision
+                your growth requires.
+              </p>
+            </div>
+            <div class="hidden lg:block pb-4">
+              <div class="flex gap-4 items-center justify-end">
+                <div
+                  class="w-12 h-12 rounded-full bg-surface-container flex items-center justify-center hover:bg-primary transition-colors cursor-pointer group"
+                >
+                  <span
+                    class="material-symbols-outlined text-on-surface group-hover:text-on-primary"
+                    data-icon="alternate_email"
+                    >alternate_email</span
+                  >
+                </div>
+                <div
+                  class="w-12 h-12 rounded-full bg-surface-container flex items-center justify-center hover:bg-primary transition-colors cursor-pointer group"
+                >
+                  <span
+                    class="material-symbols-outlined text-on-surface group-hover:text-on-primary"
+                    data-icon="call"
+                    >call</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- Main Contact Grid -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+          <!-- Contact Form Section -->
+          <div
+            class="lg:col-span-7 bg-surface-container rounded-3xl p-8 md:p-12 shadow-2xl relative overflow-hidden group"
+          >
+            <div class="relative z-10">
+              <h2
+                class="font-headline text-3xl font-bold mb-10 text-on-surface"
+              >
+                Send a Message
+              </h2>
+              <form class="space-y-8">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                  <div class="relative group/field">
+                    <label
+                      class="block text-xs font-bold text-outline uppercase tracking-widest mb-2 group-focus-within/field:text-primary transition-colors"
+                      >Full Name</label
+                    >
+                    <input
+                      class="w-full bg-transparent border-0 border-b border-outline-variant py-3 px-0 text-on-surface focus:ring-0 focus:border-primary placeholder:text-outline-variant/50 transition-all font-body"
+                      placeholder="John Doe"
+                      type="text"
+                    />
+                  </div>
+                  <div class="relative group/field">
+                    <label
+                      class="block text-xs font-bold text-outline uppercase tracking-widest mb-2 group-focus-within/field:text-primary transition-colors"
+                      >Email Address</label
+                    >
+                    <input
+                      class="w-full bg-transparent border-0 border-b border-outline-variant py-3 px-0 text-on-surface focus:ring-0 focus:border-primary placeholder:text-outline-variant/50 transition-all font-body"
+                      placeholder="john@example.com"
+                      type="email"
+                    />
+                  </div>
+                </div>
+                <div class="relative group/field">
+                  <label
+                    class="block text-xs font-bold text-outline uppercase tracking-widest mb-2 group-focus-within/field:text-primary transition-colors"
+                    >Service Interest</label
+                  >
+                  <select
+                    class="w-full bg-transparent border-0 border-b border-outline-variant py-3 px-0 text-on-surface focus:ring-0 focus:border-primary transition-all font-body appearance-none"
+                  >
+                    <option class="bg-surface-container">
+                      Select a service
+                    </option>
+                    <option class="bg-surface-container">
+                      Web Development
+                    </option>
+                    <option class="bg-surface-container">
+                      Digital Strategy
+                    </option>
+                    <option class="bg-surface-container">UI/UX Design</option>
+                    <option class="bg-surface-container">
+                      Cloud Infrastructure
+                    </option>
+                  </select>
+                </div>
+                <div class="relative group/field">
+                  <label
+                    class="block text-xs font-bold text-outline uppercase tracking-widest mb-2 group-focus-within/field:text-primary transition-colors"
+                    >Your Message</label
+                  >
+                  <textarea
+                    class="w-full bg-transparent border-0 border-b border-outline-variant py-3 px-0 text-on-surface focus:ring-0 focus:border-primary placeholder:text-outline-variant/50 transition-all font-body resize-none"
+                    placeholder="Tell us about your project..."
+                    rows="4"
+                  ></textarea>
+                </div>
+                <button
+                  class="cta-gradient w-full md:w-auto px-12 py-5 rounded-full text-on-primary font-extrabold text-sm tracking-widest uppercase hover:scale-105 active:scale-95 transition-all shadow-lg shadow-primary/20"
+                  type="submit"
+                >
+                  Send Inquiry
+                </button>
+              </form>
+            </div>
+            <!-- Decorative Element -->
+            <div
+              class="absolute -bottom-12 -right-12 w-48 h-48 bg-primary/5 rounded-full blur-3xl group-hover:bg-primary/10 transition-colors"
+            ></div>
+          </div>
+          <!-- Info & Map Sidebar -->
+          <div class="lg:col-span-5 space-y-12">
+            <!-- Contact Info Bento Box -->
+            <div class="bg-surface-container-low rounded-3xl p-8 space-y-8">
+              <div>
+                <h3
+                  class="font-headline text-lg font-bold text-on-surface mb-6"
+                >
+                  Contact Information
+                </h3>
+                <div class="space-y-6">
+                  <div class="flex items-start gap-4">
+                    <div
+                      class="p-3 rounded-xl bg-surface-container-high text-primary"
+                    >
+                      <span class="material-symbols-outlined" data-icon="mail"
+                        >mail</span
+                      >
+                    </div>
+                    <div>
+                      <p
+                        class="text-xs font-bold text-outline uppercase tracking-widest"
+                      >
+                        Email Us
+                      </p>
+                      <p class="text-on-surface font-medium">
+                        hello@growthgrid.digital
+                      </p>
+                    </div>
+                  </div>
+                  <div class="flex items-start gap-4">
+                    <div
+                      class="p-3 rounded-xl bg-surface-container-high text-primary"
+                    >
+                      <span
+                        class="material-symbols-outlined"
+                        data-icon="phone_iphone"
+                        >phone_iphone</span
+                      >
+                    </div>
+                    <div>
+                      <p
+                        class="text-xs font-bold text-outline uppercase tracking-widest"
+                      >
+                        Call Us
+                      </p>
+                      <p class="text-on-surface font-medium">
+                        +1 (555) 234-5678
+                      </p>
+                    </div>
+                  </div>
+                  <div class="flex items-start gap-4">
+                    <div
+                      class="p-3 rounded-xl bg-surface-container-high text-primary"
+                    >
+                      <span
+                        class="material-symbols-outlined"
+                        data-icon="location_on"
+                        >location_on</span
+                      >
+                    </div>
+                    <div>
+                      <p
+                        class="text-xs font-bold text-outline uppercase tracking-widest"
+                      >
+                        Studio Address
+                      </p>
+                      <p class="text-on-surface font-medium leading-relaxed">
+                        7200 Precision Way, Suite 400<br />San Francisco, CA
+                        94103
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="pt-8 border-t border-outline-variant/10">
+                <h3
+                  class="font-headline text-lg font-bold text-on-surface mb-6"
+                >
+                  Connect
+                </h3>
+                <div class="flex gap-4">
+                  <a
+                    class="w-10 h-10 rounded-full border border-outline-variant flex items-center justify-center hover:border-primary hover:text-primary transition-all"
+                    href="#"
+                  >
+                    <span
+                      class="material-symbols-outlined text-sm"
+                      data-icon="link"
+                      >link</span
+                    >
+                  </a>
+                  <a
+                    class="w-10 h-10 rounded-full border border-outline-variant flex items-center justify-center hover:border-primary hover:text-primary transition-all"
+                    href="#"
+                  >
+                    <span
+                      class="material-symbols-outlined text-sm"
+                      data-icon="public"
+                      >public</span
+                    >
+                  </a>
+                  <a
+                    class="w-10 h-10 rounded-full border border-outline-variant flex items-center justify-center hover:border-primary hover:text-primary transition-all"
+                    href="#"
+                  >
+                    <span
+                      class="material-symbols-outlined text-sm"
+                      data-icon="share"
+                      >share</span
+                    >
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!-- Map Placeholder -->
+            <div class="h-[300px] rounded-3xl overflow-hidden relative group">
+              <div
+                class="absolute inset-0 bg-surface-container-highest animate-pulse"
+                data-alt="Stylized dark minimalist street map of San Francisco"
+                style="
+                  background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuDoxbJz6Tr9f8gEQ6nnA4VySXWgHKNY1i75M-SNdYdQvtt28PFGq06VKX_76ODGEmswl6wSh58Jzn061CqzbQNr0MRccl1gxH2kKAja048QqWPb7mS5vQ8wMirRarMWCHg28gmmGzO6WMDOklaEcmqbbu8FiXG2jutdWvdn9zx4ITnxW6aV9zzEOOvwD0U2NISshnTMLeSsmm_KS70KH9v6SN0lKs_3LgGSTuN4KO4f0wr2Gl1uigfbmCZb2A41Eos3hqHib-Knvas&quot;);
+                  background-size: cover;
+                  background-position: center;
+                "
+              ></div>
+              <div
+                class="absolute inset-0 bg-surface/60 backdrop-blur-[2px] group-hover:backdrop-blur-none transition-all duration-700"
+              ></div>
+              <div class="absolute inset-0 flex items-center justify-center">
+                <div
+                  class="bg-primary text-on-primary p-4 rounded-full shadow-2xl scale-110"
+                >
+                  <span
+                    class="material-symbols-outlined"
+                    data-icon="push_pin"
+                    style="font-variation-settings: &quot;FILL&quot; 1"
+                    >push_pin</span
+                  >
+                </div>
+              </div>
+              <div
+                class="absolute bottom-4 left-4 right-4 bg-surface-container/90 backdrop-blur-md p-4 rounded-2xl flex justify-between items-center"
+              >
+                <span class="text-sm font-bold tracking-tight"
+                  >GrowthGrid HQ</span
+                >
+                <a
+                  class="text-primary text-xs font-extrabold uppercase tracking-widest hover:underline"
+                  href="#"
+                  >Get Directions</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!-- Footer -->
+    <footer class="bg-slate-50 dark:bg-[#0f131e] w-full py-16 px-6">
+      <div
+        class="grid grid-cols-1 md:grid-cols-4 gap-12 max-w-7xl mx-auto font-['Inter'] text-sm leading-relaxed"
+      >
+        <div class="md:col-span-1">
+          <span
+            class="text-xl font-bold tracking-tighter text-slate-900 dark:text-white mb-4 block"
+            >GrowthGrid</span
+          >
+          <p class="text-slate-500 dark:text-slate-400 max-w-xs">
+            Architecting high-performance digital solutions for the next
+            generation of industry leaders.
+          </p>
+        </div>
+        <div>
+          <h4
+            class="font-bold text-slate-900 dark:text-white mb-6 uppercase tracking-widest text-xs"
+          >
+            Resources
+          </h4>
+          <div class="flex flex-col gap-4">
+            <a
+              class="text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white hover:translate-x-1 transition-transform duration-200"
+              href="#"
+              >Our Services</a
+            >
+            <a
+              class="text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white hover:translate-x-1 transition-transform duration-200"
+              href="#"
+              >The Process</a
+            >
+            <a
+              class="text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white hover:translate-x-1 transition-transform duration-200"
+              href="#"
+              >Success Stories</a
+            >
+          </div>
+        </div>
+        <div>
+          <h4
+            class="font-bold text-slate-900 dark:text-white mb-6 uppercase tracking-widest text-xs"
+          >
+            Navigation
+          </h4>
+          <div class="flex flex-col gap-4">
+            <a
+              class="text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white hover:translate-x-1 transition-transform duration-200"
+              href="#"
+              >Email Us</a
+            >
+            <a
+              class="text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white hover:translate-x-1 transition-transform duration-200"
+              href="#"
+              >LinkedIn</a
+            >
+            <a
+              class="text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white hover:translate-x-1 transition-transform duration-200"
+              href="#"
+              >Instagram</a
+            >
+            <a
+              class="text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white hover:translate-x-1 transition-transform duration-200"
+              href="#"
+              >Twitter</a
+            >
+          </div>
+        </div>
+        <div>
+          <h4
+            class="font-bold text-slate-900 dark:text-white mb-6 uppercase tracking-widest text-xs"
+          >
+            Legal
+          </h4>
+          <div class="flex flex-col gap-4">
+            <a
+              class="text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white hover:translate-x-1 transition-transform duration-200"
+              href="#"
+              >Privacy Policy</a
+            >
+            <a
+              class="text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white hover:translate-x-1 transition-transform duration-200"
+              href="#"
+              >Terms of Use</a
+            >
+            <p class="text-slate-500 dark:text-slate-400 mt-4">
+              © 2024 GrowthGrid Digital. All rights reserved.
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
