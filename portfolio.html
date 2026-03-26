@@ -195,7 +195,7 @@
             <span id="close-icon" class="material-symbols-outlined hidden">close</span>
           </button>
           <button
-            class="bg-gradient-to-br from-primary to-primary-container text-on-primary px-6 py-2 rounded-full font-headline font-bold text-sm hover:opacity-90 transition-all shadow-[0_0_20px_rgba(133,173,255,0.3)]"
+            class="bg-gradient-to-br from-primary to-secondary text-on-primary font-bold text-sm px-6 py-2 rounded-full hover:opacity-90 transition-all duration-300 scale-95 active:scale-90 shadow-[0_0_20px_rgba(133,173,255,0.3)]"
           >
             Contact
           </button>
@@ -290,22 +290,26 @@
             >Filter by:</span
           >
           <button
-            class="px-6 py-2 rounded-full bg-primary text-on-primary font-bold text-sm transition-all"
+            class="filter-btn px-6 py-2 rounded-full bg-primary text-on-primary font-bold text-sm transition-all"
+            data-filter="all"
           >
             All Works
           </button>
           <button
-            class="px-6 py-2 rounded-full bg-surface-container-high text-on-surface-variant hover:text-on-surface font-medium text-sm transition-all"
+            class="filter-btn px-6 py-2 rounded-full bg-surface-container-high text-on-surface-variant hover:text-on-surface font-medium text-sm transition-all"
+            data-filter="web-apps"
           >
             Web Apps
           </button>
           <button
-            class="px-6 py-2 rounded-full bg-surface-container-high text-on-surface-variant hover:text-on-surface font-medium text-sm transition-all"
+            class="filter-btn px-6 py-2 rounded-full bg-surface-container-high text-on-surface-variant hover:text-on-surface font-medium text-sm transition-all"
+            data-filter="mobile"
           >
             Mobile
           </button>
           <button
-            class="px-6 py-2 rounded-full bg-surface-container-high text-on-surface-variant hover:text-on-surface font-medium text-sm transition-all"
+            class="filter-btn px-6 py-2 rounded-full bg-surface-container-high text-on-surface-variant hover:text-on-surface font-medium text-sm transition-all"
+            data-filter="ui-ux-design"
           >
             UI/UX Design
           </button>
@@ -317,6 +321,7 @@
           <!-- Project Card 1 (Large) -->
           <div
             class="md:col-span-8 group relative overflow-hidden rounded-xl bg-surface-container shadow-2xl transition-all duration-500 hover:-translate-y-2"
+            data-category="web-apps"
           >
             <div class="aspect-[16/9] w-full overflow-hidden">
               <img
@@ -359,6 +364,7 @@
           <!-- Project Card 2 -->
           <div
             class="md:col-span-4 group relative overflow-hidden rounded-xl bg-surface-container shadow-2xl transition-all duration-500 hover:-translate-y-2"
+            data-category="mobile"
           >
             <div class="aspect-square w-full overflow-hidden">
               <img
@@ -385,6 +391,7 @@
           <!-- Project Card 3 -->
           <div
             class="md:col-span-4 group relative overflow-hidden rounded-xl bg-surface-container shadow-2xl transition-all duration-500 hover:-translate-y-2"
+            data-category="ui-ux-design"
           >
             <div class="aspect-square w-full overflow-hidden">
               <img
@@ -411,6 +418,7 @@
           <!-- Project Card 4 (Large) -->
           <div
             class="md:col-span-8 group relative overflow-hidden rounded-xl bg-surface-container shadow-2xl transition-all duration-500 hover:-translate-y-2"
+            data-category="ui-ux-design"
           >
             <div class="aspect-[16/9] w-full overflow-hidden">
               <img
@@ -660,6 +668,48 @@
             closeIcon.classList.add('hidden');
           });
         });
+      }
+
+      // Portfolio Filter Functionality
+      const filterButtons = document.querySelectorAll('.filter-btn');
+      const projectCards = document.querySelectorAll('[data-category]');
+
+      function filterProjects(category) {
+        projectCards.forEach(card => {
+          if (category === 'all' || card.dataset.category === category) {
+            card.style.display = 'block';
+            // Add fade-in animation
+            card.style.opacity = '0';
+            setTimeout(() => {
+              card.style.opacity = '1';
+            }, 50);
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      }
+
+      function setActiveButton(activeButton) {
+        filterButtons.forEach(button => {
+          button.classList.remove('bg-primary', 'text-on-primary', 'font-bold');
+          button.classList.add('bg-surface-container-high', 'text-on-surface-variant', 'hover:text-on-surface', 'font-medium');
+        });
+        activeButton.classList.remove('bg-surface-container-high', 'text-on-surface-variant', 'hover:text-on-surface', 'font-medium');
+        activeButton.classList.add('bg-primary', 'text-on-primary', 'font-bold');
+      }
+
+      filterButtons.forEach(button => {
+        button.addEventListener('click', () => {
+          const category = button.dataset.filter;
+          filterProjects(category);
+          setActiveButton(button);
+        });
+      });
+
+      // Set "All Works" as default active
+      const allWorksButton = document.querySelector('[data-filter="all"]');
+      if (allWorksButton) {
+        setActiveButton(allWorksButton);
       }
     </script>  </body>
 </html>
